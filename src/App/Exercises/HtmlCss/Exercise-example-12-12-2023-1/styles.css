@@ -1,3 +1,115 @@
-.font-test-family {
+/* .font-test-family {
   font-family: Chilanka;
 }
+
+.exercise .red-font {
+  color: red;
+}
+
+.exercise .green-font {
+  color: green;
+}
+
+.green-font {
+  color: rgb(124, 201, 124);
+} */
+
+
+/* :root {
+
+
+  --main-font-color: #FE5407;
+}
+
+.my-2 {
+  margin: 8px 0px;
+}
+
+.my-1 {
+  margin: 4px 0px;
+}
+
+.font-color {
+  color: var(--main-font-color);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+  {
+  background-color: #E5E5E5;
+} */
+
+
+
+
+:root {
+  --main-font-color: #FE3756;
+}
+
+.document {
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 18px;
+  line-height: 34px;
+
+
+  position: relative;
+  width: 984px;
+  height: 2568px;
+
+
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.content-wraper p {
+  margin: 0;
+}
+
+.content-wraper {
+  max-width: 571px;
+  height: auto;
+}
+
+.content-wraper.section-one {
+margin: 80px 173px 40px 240px;
+}
+
+.content-wraper.section-two {
+  margin: 40px 173px 40px 240px;
+}
+
+.content-wraper.section-three {
+  margin: 40px 173px 88px 240px;
+}
+
+.content-wraper b {
+  font-weight: 700;
+}
+
+
+.content-wraper a {
+  color: var(--main-font-color);
+  font-weight: bold;
+}
+
+.content-wraper li {
+  padding: 18px 0;
+}
+
+.section-one ul {
+ list-style: square;
+}
+
+.content-wraper ol,
+ul {
+  padding-left: 30px;
+}
+
