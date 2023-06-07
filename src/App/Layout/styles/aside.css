@@ -5,6 +5,7 @@ aside {
   flex-direction: column;
   justify-content: space-between;
   overflow-y: auto;
+
 }
 
 aside ul {
@@ -15,12 +16,14 @@ aside ul {
 
 aside li {
   line-height: 2rem;
+
 }
 
 .aside-row {
   display: flex;
   flex-direction: row;
   align-items: center;
+
 }
 
 aside li a {
@@ -31,4 +34,5 @@ aside li a {
 aside a.active {
   background-color: var(--color-primary-blue);
   color: var(--color-white);
+  border-radius: 15px;
 }
