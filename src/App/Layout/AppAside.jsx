@@ -43,6 +43,7 @@ export function AppAside() {
               Kalendarz
             </NavLink>
           </li>
+          <hr />
           <li>
             <NavLink className="aside-row" to="settings">
               <SettingIcon />
