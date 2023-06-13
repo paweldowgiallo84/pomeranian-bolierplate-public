@@ -3,7 +3,7 @@ import React from 'react';
 import './style.css';
 import { Click5 } from '../Click5/Click5';
 import { SeeOrNot } from '../SeeOrNot/SeeOrNot';
-import { MoreOrLess } from '../MoreOrLess/MoreOrLess';
+import { MoreThen10 } from '../MoreThen10/MoreThen10';
 
 export function Block9() {
   return (
@@ -12,7 +12,7 @@ export function Block9() {
       <hr />
       <SeeOrNot />
       <hr />
-      <MoreOrLess />
+      <MoreThen10 />
     </div>
   );
 }
