@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary-red: #FE3756;
+    --primary-font-white: #ffffff;
+    --text-input-border: #C8CBD1;
+}
+
+.SeeOrNot{
+    margin-left: 5rem;
+
+}
+
+.SeeOrNot h1 {
+    margin-top: 2,5 rem;
+    width: 496px;
+    height: 77px;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 69px;
+}
+
+.btn {
+    height: 56px;
+    width: 326px;
+    left: 0px;
+    top: 0px;
+    margin-top: 45px;
+    border: none;
+    border-radius: 8px;
+    padding: 20px 36px 20px 36px;
+    background-color: var(--color-primary-red);
+    color: var(--primary-font-white);
+}
