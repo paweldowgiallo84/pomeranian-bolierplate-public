@@ -5,23 +5,26 @@ export const Click5 = () => {
   const [click, setClick] = useState(0);
   const [message, setMessage] = useState();
 
-  function clickHandler() {
-    let currentClick = click;
-    setClick(currentClick + 1);
+  function clickCounter() {
+    let actualClick = click;
+    setClick(actualClick + 1);
 
-    if (currentClick + 1 >= 5) {
-      setMessage('Gratulacje kliknąłeś 5 razy');
+    if (actualClick + 1 >= 5) {
+      setMessage(`Super! Kliknąłeś ${actualClick + 1} razy`);
+    } else if (actualClick + 1 === 1) {
+      setMessage(`Kliknałeś ${actualClick + 1} raz`);
     } else {
-      setMessage(`Kliknąłes ${currentClick + 1} razy`);
+      setMessage(`Kliknąłeś ${actualClick + 1} razy`);
     }
   }
 
   return (
     <div className="click5">
       <h1>Kliknij 5</h1>
-      <button className="btn" onClick={clickHandler}>
+      <button className="btn" onClick={clickCounter}>
         {'START'}
       </button>
+
       <h2>{message}</h2>
     </div>
   );

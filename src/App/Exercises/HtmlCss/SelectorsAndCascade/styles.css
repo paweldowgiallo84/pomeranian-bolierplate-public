@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-backgroun-01: #8f4e4e;
+  --color-backgroun-02: #58db9a;
+  --color-backgroun-03: #456987;
+
+}
+
+.SelectorsAndCascade div {
+  padding: 10px;
+  background-color: #456987;
+}
+
+.div-03>span {
+  color: #8f4e4e;
+  font-size: 24px;
+
+}
+
+span~p {
+  width: fit-content;
+  background-color: #58db9a;
+  font-size: 6px;
+  padding: 5px;
+
+}
+
+.div-01+div {
+  border: 2px solid var(--color-backgroun-02);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+.SelectorsAndCascade div:last-child {
+  background-image: linear-gradient(to right bottom, #456789, #98765488);
+  border-radius: 10px;
+  width: fit-content;
+}
+
+span~p::after {
+  content: " I tak tzrymaj";
+  color: #58db9a;
+}
