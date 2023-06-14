@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'DigitalClock';
+    src: url(./font/digital-7.ttf);
+}
+
+:root {
+    --color-clock-backgroun: #fffdea;
+    --color-clock-border: #5e5e5e;
+    --color-clock-shadow: rgba(73, 49, 49, 0.233);
+}
+
+.clock {
+    font-family: DigitalClock;
+    font-size: 36px;
+    font-weight: 600;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-clock-backgroun);
+    border: 4px solid var(--color-clock-border);
+    box-shadow: 5px 5px var(--color-clock-shadow);
+    border-radius: 20%;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer {
+    display: flex;
+    margin-left: 5rem;
+
+}
