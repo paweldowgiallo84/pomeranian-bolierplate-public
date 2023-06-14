@@ -23,9 +23,9 @@ export const DateTime = () => {
   };
 
   setTimeout(updateTime, 1000);
-  console.log(hour);
-  console.log(minut);
-  console.log(second);
+  // console.log(hour);
+  // console.log(minut);
+  // console.log(second);
 
   return (
     <div className="timer">

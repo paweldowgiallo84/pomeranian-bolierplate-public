@@ -11,6 +11,7 @@ import {
   blockRouterMetaData as htmlBlockRouterMetaData,
 } from './view-router-data';
 import { ExerciseLinks } from './ExerciseLinks';
+import { SelectorsAndCascadeMetaData } from './SelectorsAndCascade/router-data';
 
 export function HtmlCssExercises() {
   const element = useRoutes(htmlBlockRouterData);

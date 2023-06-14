@@ -1,5 +1,9 @@
 import './styles.css';
 
-export const CV= () => {
-  return <div>My CV - todo</div>;
+export const CV = () => {
+  return (
+    <div>
+      <p>My CV - todo</p>
+    </div>
+  );
 };

@@ -1,43 +1,6 @@
 import './styles.css';
 
-// export function Exercise() {
-//   return (
-//     <div>
-//       <div className="exercise">
-//         <p className="font-test-family red-font">Siemanko Paweł</p>
-//         <p className="font-test-family green-font">Siemanko Paweł</p>
-//       </div>
-
-//       <div>
-//         <p className="font-test-family green-font">Siemanko Paweł</p>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export const Exercise2 = () => (
-//   <p className="font-test-family red-font">Siemanko Paweł</p>
-// );
-
-// export function Exercise() {
-//   return (
-//     <div className="business-card">
-//       <h3 className="my-2 font-color">
-//         <b>Masz pytania?</b>
-//       </h3>
-//       <h3 className="my-2">
-//         <b>Nasz specjalista chętnie Ci pomoże.</b>
-//       </h3>
-//       <br />
-//       <h4 className="my-2 bold">Eleonora Frąckiewiczówna</h4>
-//       <h4 className="my-2 font-color bold">Specjalista ds. finansowania</h4>
-//       <p className="my-1">efrackiewiczowna@rtc.pl</p>
-//       <p className="my-1">500 677 543</p>
-//     </div>
-//   );
-// }
-
-export function Exercise() {
+export function HTMLAndCSS() {
   return (
     <div className="document">
       <div className="content-wraper section-one">
