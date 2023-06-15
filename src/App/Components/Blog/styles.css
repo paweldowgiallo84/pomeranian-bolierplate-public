@@ -13,18 +13,15 @@
     left: 970px;
 }
 
-.pointed-hand-icon {
+/* .pointed-hand-icon {
     position: absolute;
     left: 960px;
     bottom: -30px;
     transform: rotate(-45deg);
     opacity: 0.7;
-}
+} */
 
-.links a:visited {
-    color: forestgreen;
 
-}
 
 .blog {
     display: flex;
@@ -54,6 +51,7 @@
     left: 268px;
     top: 220px;
 
+    cursor:pointer;
 }
 
 .post-date {
@@ -113,6 +111,7 @@
     font-size: 14px;
     line-height: 22px;
     text-align: right;
+
 }
 
 .post01 {
@@ -133,6 +132,10 @@
     border-radius: 8px;
 }
 
+.post02 p {
+    font-style: italic;
+}
+
 .post03 {
     position: relative;
     top: 0px;
@@ -143,8 +146,15 @@
     border-radius: 8px;
 }
 
+.links a:visited {
+    color: #222222;
 
+}
 
-p:nth-child(n + 2) {
-    font-size: larger;
+.links a[href$="wp.pl"] {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    text-decoration-line: underline;
 }
