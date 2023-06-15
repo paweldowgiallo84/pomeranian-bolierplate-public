@@ -20,7 +20,7 @@
 
 }
 
-span~p {
+.SelectorsAndCascade span~p {
   width: fit-content;
   background-color: #58db9a;
   font-size: 6px;
@@ -42,7 +42,7 @@ span~p {
   width: fit-content;
 }
 
-span~p::after {
+.SelectorsAndCascade span~p::after {
   content: " I tak tzrymaj";
   color: #58db9a;
 }
