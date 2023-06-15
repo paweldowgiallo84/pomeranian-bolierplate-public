@@ -1,15 +1,27 @@
 import './styles.css';
 import { NotificationIcon } from '../Icons/Notification';
+import { TogleArrowIcon } from '../Icons/ToggleArrowIcon';
+import { PointinHandIcon } from '../Icons/PointinHandIcon';
+import { Title } from './Title/Title';
+import { Author } from './Author/Author';
 
 export const Blog = () => {
   return (
     <div>
-      <h1 className="blog">&lt; Blog</h1>
+      <h1 className="blog">
+        <div className="toggle-arrow-icon">
+          <TogleArrowIcon />
+        </div>
+        Blog
+      </h1>
       <div className="post post01">
-        <div className='notif-icon'><NotificationIcon /></div>
+        <div className="notif-icon">
+          <NotificationIcon />
+        </div>
         <div>
           <span className="post-date">30-11-2022</span>
-          <h2 className="post-title">Why are we so nostalgic for the 1990s?</h2>
+          {/* <h2 className="post-title">Why are we so nostalgic for the 1990s?</h2> */}
+          <Title text="Why are we so nostalgic for the 1990s?" />
           <div className="post-content">
             <p>
               Pop culture used to define a generation, but it seems the
@@ -27,9 +39,10 @@ export const Blog = () => {
             </p>
           </div>
           <div className="author">
-            <span className="name">Radosława Majdan</span>
-            <br />
-            <span className="position">Senior Marketing Specialist</span>
+            {/* <span className="name">Radosława Majdan</span> */}
+            <Author name="Radosława Majdan" />
+            {/* <span className="position">Senior Marketing Specialist</span> */}
+            <Author position="Senior Marketing Specialist" />
           </div>
         </div>
       </div>
@@ -37,7 +50,8 @@ export const Blog = () => {
       <div className="post post02">
         <div>
           <span className="post-date">30-11-2022</span>
-          <h2 className="post-title">I make mistakes!</h2>
+          {/* <h2 className="post-title">I make mistakes!</h2> */}
+          <Title text="I make mistakes!" />
           <div className="post-content">
             <p>
               “I’m selfish, impatient and a little insecure. I make mistakes, I
@@ -45,7 +59,9 @@ export const Blog = () => {
               handle me at my worst, then you sure as hell don’t deserve me at
               my best.”
             </p>
-            <span className="author-quote">Marilyn Monroe</span>
+            <div className="author-quote">
+              <span>Marilyn Monroe</span>
+            </div>
           </div>
           <div className="author">
             <span className="name">Radosława Majdan</span>
@@ -57,6 +73,9 @@ export const Blog = () => {
 
       <div className="post post03">
         <div>
+          {/* <div className="pointed-hand-icon">
+            <PointinHandIcon />
+          </div> */}
           <span className="post-date">30-11-2022</span>
           <h2 className="post-title">
             18 Record-Breaking, Controversial, and Weird Facts{' '}
