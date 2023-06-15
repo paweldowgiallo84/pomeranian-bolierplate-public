@@ -1,12 +1,21 @@
 import './styles.css';
 import { NotificationIcon } from '../Icons/Notification';
+import { TogleArrowIcon } from '../Icons/ToggleArrowIcon';
+import { PointinHandIcon } from '../Icons/PointinHandIcon';
 
 export const Blog = () => {
   return (
     <div>
-      <h1 className="blog">&lt; Blog</h1>
+      <h1 className="blog">
+        <div className="toggle-arrow-icon">
+          <TogleArrowIcon />
+        </div>
+        Blog
+      </h1>
       <div className="post post01">
-        <div className='notif-icon'><NotificationIcon /></div>
+        <div className="notif-icon">
+          <NotificationIcon />
+        </div>
         <div>
           <span className="post-date">30-11-2022</span>
           <h2 className="post-title">Why are we so nostalgic for the 1990s?</h2>
@@ -57,6 +66,9 @@ export const Blog = () => {
 
       <div className="post post03">
         <div>
+          <div className="pointed-hand-icon">
+            <PointinHandIcon />
+          </div>
           <span className="post-date">30-11-2022</span>
           <h2 className="post-title">
             18 Record-Breaking, Controversial, and Weird Facts{' '}
