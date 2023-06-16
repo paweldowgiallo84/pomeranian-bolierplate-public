@@ -2,30 +2,41 @@ import { useState } from 'react';
 import './styles.css';
 
 export const Click5 = () => {
-  const [click, setClick] = useState(0);
-  const [message, setMessage] = useState();
+  const [click, setClick] = useState(1);
+  const [message, setMessage] = useState('Kliknąłeś 0 razy');
 
   function clickCounter() {
-    let actualClick = click;
-    setClick(actualClick + 1);
+    setClick(click + 1);
 
-    if (actualClick + 1 >= 5) {
-      setMessage(`Super! Kliknąłeś ${actualClick + 1} razy`);
-    } else if (actualClick + 1 === 1) {
-      setMessage(`Kliknałeś ${actualClick + 1} raz`);
+    if (click >= 5) {
+      setMessage(`Super! Kliknąłeś juz 5 razy... możesz przestać`);
+    } else if (click === 1) {
+      setMessage(`Kliknąłeś ${click} raz`);
     } else {
-      setMessage(`Kliknąłeś ${actualClick + 1} razy`);
+      setMessage(`Kliknąłeś ${click} razy`);
     }
   }
+
+  function clickReset() {
+    setClick(1);
+    setMessage('Zresetowałeś licznik!');
+  }
+  console.log(click);
 
   return (
     <div className="click5">
       <h1>Kliknij 5</h1>
-      <button className="btn" onClick={clickCounter}>
-        {'START'}
-      </button>
+      <div className="click5-content">
+        <button className="btn" onClick={clickCounter}>
+          {'START'}
+        </button>
 
-      <h2>{message}</h2>
+        <h2 className="click5-msg">{message}</h2>
+
+        <button className="btn2" onClick={clickReset}>
+          {'RESET'}
+        </button>
+      </div>
     </div>
   );
 };

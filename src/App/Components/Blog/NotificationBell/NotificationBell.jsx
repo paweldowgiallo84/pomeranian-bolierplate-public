@@ -1,27 +1,26 @@
 import { useState } from 'react';
 import './styles.css';
+import { NotificationIcon } from '../../Icons/Notification';
 
-export const SeeOrNot = () => {
+export const NotificationBell = () => {
   const [isvVsible, setIsVisible] = useState(true);
-  const [isButto, setIsButto] = useState('Ukryj');
+  const [isIcon, setIsIcon] = useState(true);
 
   function clickHandler() {
     let curentIsVisible = isvVsible;
     setIsVisible(!curentIsVisible);
 
     if (!curentIsVisible) {
-      setIsButto('Pokaż');
+      setIsIcon();
     } else {
-      setIsButto('Ukryj');
+      setIsIcon();
     }
   }
 
   return (
-    <div className="SeeOrNot">
-      <h1>See Or Not</h1>
-      <button className="btn" onClick={clickHandler}>
-        {isButto}
-      </button>
+    <div className="notif-icon">
+      <NotificationIcon onClick={clickHandler} />
+      {isIcon}
     </div>
   );
 };

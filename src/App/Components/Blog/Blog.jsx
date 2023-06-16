@@ -1,9 +1,9 @@
 import './styles.css';
-import { NotificationIcon } from '../Icons/Notification';
+// import { NotificationIcon } from '../Icons/Notification';
 import { TogleArrowIcon } from '../Icons/ToggleArrowIcon';
-import { PointinHandIcon } from '../Icons/PointinHandIcon';
 import { Title } from './Title/Title';
 import { Author } from './Author/Author';
+import { NotificationBell } from './NotificationBell/NotificationBell';
 
 export const Blog = () => {
   return (
@@ -15,12 +15,12 @@ export const Blog = () => {
         Blog
       </h1>
       <div className="post post01">
-        <div className="notif-icon">
-          <NotificationIcon />
-        </div>
+        {/* <div className="notif-icon">
+          
+        </div> */}
+        <NotificationBell />
         <div>
           <span className="post-date">30-11-2022</span>
-          {/* <h2 className="post-title">Why are we so nostalgic for the 1990s?</h2> */}
           <Title text="Why are we so nostalgic for the 1990s?" />
           <div className="post-content">
             <p>
@@ -39,9 +39,7 @@ export const Blog = () => {
             </p>
           </div>
           <div className="author">
-            {/* <span className="name">Radosława Majdan</span> */}
             <Author name="Radosława Majdan" />
-            {/* <span className="position">Senior Marketing Specialist</span> */}
             <Author position="Senior Marketing Specialist" />
           </div>
         </div>
@@ -50,7 +48,6 @@ export const Blog = () => {
       <div className="post post02">
         <div>
           <span className="post-date">30-11-2022</span>
-          {/* <h2 className="post-title">I make mistakes!</h2> */}
           <Title text="I make mistakes!" />
           <div className="post-content">
             <p>
@@ -64,22 +61,16 @@ export const Blog = () => {
             </div>
           </div>
           <div className="author">
-            <span className="name">Radosława Majdan</span>
-            <br />
-            <span className="position">Senior Marketing Specialist</span>
+            <Author name="Radosława Majdan" />
+            <Author position="Senior Marketing Specialist" />
           </div>
         </div>
       </div>
 
       <div className="post post03">
         <div>
-          {/* <div className="pointed-hand-icon">
-            <PointinHandIcon />
-          </div> */}
           <span className="post-date">30-11-2022</span>
-          <h2 className="post-title">
-            18 Record-Breaking, Controversial, and Weird Facts{' '}
-          </h2>
+          <Title text="18 Record-Breaking, Controversial, and Weird Facts" />
           <div className="post-content">
             <p>
               The death of Queen Elizabeth II on September 8 at the age of 96
@@ -109,9 +100,8 @@ export const Blog = () => {
             </div>
           </div>
           <div className="author">
-            <span className="name">Radosława Majdan</span>
-            <br />
-            <span className="position">Senior Marketing Specialist</span>
+            <Author name="Radosława Majdan" />
+            <Author position="Senior Marketing Specialist" />
           </div>
         </div>
       </div>

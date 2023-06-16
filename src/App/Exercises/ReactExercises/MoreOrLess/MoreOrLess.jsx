@@ -3,8 +3,8 @@ import './styles.css';
 
 export const MoreOrLess = () => {
   const [answer, setAnswer] = useState('');
-  const [valueA, setValueA] = useState();
-  const [valueB, setValueB] = useState();
+  const [valueA, setValueA] = useState(0);
+  const [valueB, setValueB] = useState(0);
 
   function numberA(ev) {
     let A = ev.target.value;
@@ -22,14 +22,19 @@ export const MoreOrLess = () => {
     console.log('valA = '.concat(valueA));
   }
 
+  // COŚ W FUNKCJI comperAB   NIE PASI??
+
   function comperAB(x, y) {
     if (x > y) {
       setAnswer('A jest większe od B');
-    } else if (y > x) {
+    } else if (x < y) {
       setAnswer('A jest mniejsze od B');
     } else {
       setAnswer('A i B są takie same');
     }
+
+    console.log('');
+    console.log(x, y);
   }
 
   return (
