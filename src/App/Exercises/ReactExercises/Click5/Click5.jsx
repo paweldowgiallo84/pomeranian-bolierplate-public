@@ -21,7 +21,7 @@ export const Click5 = () => {
     setClick(1);
     setMessage('Zresetowałeś licznik!');
   }
-  console.log(click);
+  // console.log(click);
 
   return (
     <div className="click5">

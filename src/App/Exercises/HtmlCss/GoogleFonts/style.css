@@ -16,6 +16,37 @@
   color: #ffffff;
 }
 
+.googleFonts .buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons .buttons {
+  
+}
+
 .theme-transition {
   transition:ease-in-out 3s;
+}
+
+.googleFonts {
+  overflow: hidden;
+}
+
+.animation {
+  animation-name: slide-in;
+  animation-duration: 2s;
+  }
+
+@keyframes slide-in{
+0% {
+ 
+  transform: translateY(-500px);
+  opacity: 0;
+}
+100% {
+  
+  transform: translate(0px);
+  opacity: 1;
+}
 }

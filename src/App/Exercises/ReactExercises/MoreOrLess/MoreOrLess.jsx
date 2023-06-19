@@ -1,30 +1,33 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './styles.css';
 
 export const MoreOrLess = () => {
   const [answer, setAnswer] = useState('');
   const [valueA, setValueA] = useState(0);
   const [valueB, setValueB] = useState(0);
+  useEffect(() => {
+    compare(Number(valueA), Number(valueB));
+  }, [valueA, valueB]);
 
   function numberA(ev) {
-    let A = ev.target.value;
-    setValueA(A);
-    comperAB(A, valueB);
-    console.log('A = '.concat(A));
-    console.log('valB = '.concat(valueB));
+    setValueA(ev.target.value);
+
+    // console.log('A = '.concat(A));
+    // console.log('valB = '.concat(valueB));
   }
 
   function numberB(ev) {
-    let B = ev.target.value;
-    setValueB(B);
-    comperAB(valueA, B);
-    console.log('B = '.concat(B));
-    console.log('valA = '.concat(valueA));
+    setValueB(ev.target.value);
+
+    // console.log('B = '.concat(B));
+    // console.log('valA = '.concat(valueA));
   }
 
   // COŚ W FUNKCJI comperAB   NIE PASI??
 
-  function comperAB(x, y) {
+  function compare(x, y) {
+    // console.log('');
+    // console.log(x, y);
     if (x > y) {
       setAnswer('A jest większe od B');
     } else if (x < y) {
@@ -32,10 +35,19 @@ export const MoreOrLess = () => {
     } else {
       setAnswer('A i B są takie same');
     }
-
-    console.log('');
-    console.log(x, y);
   }
+
+  // function compare(x, y) {
+  //   console.log(x, y);
+  //   console.log(typeof x, typeof y);
+  //   if (x > y) {
+  //     console.log('A jest większe od B');
+  //   } else if (x < y) {
+  //     console.log('A jest mniejsze od B');
+  //   } else {
+  //     console.log('A i B są takie same');
+  //   }
+  // }
 
   return (
     <div className="moreOrLess">
@@ -43,13 +55,13 @@ export const MoreOrLess = () => {
       <div className="numberInput">
         <input
           className="inputA"
-          type="Number"
+          type="number"
           onChange={numberA}
           placeholder="A"
         />
         <input
           className="inputB"
-          type="Number"
+          type="number"
           onChange={numberB}
           placeholder="B"
         />
