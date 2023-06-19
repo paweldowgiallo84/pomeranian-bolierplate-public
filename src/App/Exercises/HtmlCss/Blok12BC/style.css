@@ -1,0 +1,104 @@
+.font-bebas {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.businescard {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 5em;
+}
+
+.business-card {
+  display: flex;
+  flex-direction: column;
+  gap: .2em;
+  width: fit-content;
+  padding: 2em;
+  background-image: linear-gradient(45deg, #e8dcf442, #2f2e2ca5),
+  linear-gradient(-90deg, rgba(133, 162, 191, 0.188), rgba(190, 211, 110, 0.211));
+  border: 1px solid #000000;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  animation: border-radius-resize 5s 0.5s infinite ease-in-out;
+  /* animation: slide 3s ease-in-out infinite alternate; */
+}
+
+@keyframes border-radius-resize {
+  0% {
+    border-radius: 0;
+  }
+
+  50% {
+    border-radius: 50px;
+  }
+
+  100% {
+    border-radius: 0;
+  }
+}
+/* 
+@keyframes slide { 
+  0%{background-position:10% 0%}
+  50%{background-position:91% 100%}
+  100%{background-position:10% 0%}
+} */
+
+.business-card * {
+  margin: 0;
+
+}
+
+.business-card h2 {
+  font-family: 'Bebas Neue';
+  font-size: 32px;
+}
+
+.business-card a {
+  text-decoration: none;
+  color: black;
+}
+
+.business-card section {
+  margin-bottom: .2em;
+}
+
+.business-card section :nth-child(2) {
+  color: #FE3756;
+}
+
+.typewriter .question {
+  overflow: hidden;
+
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation:
+    typing 4.5s steps(40, end) 0.5s infinite alternate;
+
+}
+
+.typewriter .answer {
+  overflow: hidden;
+
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation:
+    typing 4.5s steps(40, end) infinite;
+
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}

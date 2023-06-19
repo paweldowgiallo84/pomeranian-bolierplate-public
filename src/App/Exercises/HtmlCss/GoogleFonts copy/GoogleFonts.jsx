@@ -42,17 +42,29 @@ export function GoogleFonts() {
           labore. Totam assumenda sed debitis, nam quas porro tenetur est!
         </p>
       </div>
-      <div className='buttons'>
-        <button className='button' onClick={() => handleFontChange('font-poppins')}>
+      <div className="buttons">
+        <button
+          className="button"
+          onClick={() => handleFontChange('font-poppins')}
+        >
           Zmiana fontu na: Poppins
         </button>
-        <button className='button' onClick={() => handleFontChange('font-lato')}>
+        <button
+          className="button"
+          onClick={() => handleFontChange('font-lato')}
+        >
           Zmiana fontu na : Lato
         </button>
-        <button className='button' onClick={() => handleThemeChange('light-theme')}>
+        <button
+          className="button"
+          onClick={() => handleThemeChange('light-theme')}
+        >
           Zamian theamu na jasny
         </button>
-        <button className='button' onClick={() => handleThemeChange('dark-theme')}>
+        <button
+          className="button"
+          onClick={() => handleThemeChange('dark-theme')}
+        >
           Zamian theamu na ciemny
         </button>
       </div>

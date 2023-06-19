@@ -6,6 +6,8 @@ import { SeeOrNot } from '../SeeOrNot/SeeOrNot';
 import { MoreThen10 } from '../MoreThen10/MoreThen10';
 import { MoreOrLess } from '../MoreOrLess/MoreOrLess';
 import { DateTime } from '../DateTime/DateTime';
+import { WhatNumber } from '../WhatNumber/WhatNumber';
+import { Calculator } from '../Calculator/Calculator';
 
 export function Block9() {
   return (
@@ -19,6 +21,10 @@ export function Block9() {
       <MoreThen10 />
       <hr />
       <MoreOrLess />
+      <hr />
+      <WhatNumber />
+      <hr />
+      <Calculator />
     </div>
   );
 }
