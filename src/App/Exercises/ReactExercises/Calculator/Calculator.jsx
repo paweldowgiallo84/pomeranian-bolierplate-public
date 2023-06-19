@@ -41,13 +41,33 @@ export const Calculator = () => {
 
   return (
     <div className="calculator">
-      <div className="calculator-body">
+      <div className="calculator-body calc-btn">
         <img src="./images/calc-ref.png" alt="" />
-        <div className="calculator-display"></div>
-        <div className="calculator-buttons">
-          <div className="calculator-buttons-memory"></div>
-          <div className="calculator-buttons-numbers"></div>
-          <div className="calculator-buttons-operators"></div>
+        <div className="calculator-display">TU BEDZIE EKRAN</div>
+
+        <div className="calculator-buttons-memory btn-color-light-gray">
+          <div className="calculator-small-button memory-btn-01">MRC</div>
+          <div className="calculator-small-button memory-btn-02">M-</div>
+          <div className="calculator-small-button memory-btn-03">M+</div>
+          {/* TU BEDA PRZYCISKI MEMORY */}
+        </div>
+        <div className="calculator-buttons-numbers">
+          <div className="calculator-small-button number-btn-01"></div>
+          <div className="calculator-small-button number-btn-02"></div>
+          <div className="calculator-small-button number-btn-03"></div>
+          <div className="calculator-small-button number-btn-04"></div>
+          <div className="calculator-small-button number-btn-05"></div>
+          <div className="calculator-small-button number-btn-06"></div>
+          <div className="calculator-small-button number-btn-07"></div>
+          <div className="calculator-small-button number-btn-08"></div>
+          <div className="calculator-small-button number-btn-09"></div>
+          <div className="calculator-small-button number-btn-10"></div>
+          <div className="calculator-small-button number-btn-11"></div>
+          <div className="calculator-small-button number-btn-12"></div>
+          {/* TU BEDA KLAWISZE Z NUMERAMI */}
+        </div>
+        <div className="calculator-buttons-operators">
+          TU BEDA KLAWISZE OPERACJI
         </div>
       </div>
     </div>
