@@ -9,7 +9,6 @@ import { Block12ListsMetaData } from './Block12Lists/router-data';
 import { BoxModel } from './BoxModel/BoxModel';
 import { BoxModelMetaData } from './BoxModel/router-data';
 
-
 export const blockRouterMetaData = [
   HTMLAndCSSMetaData,
   SelectorsAndCascadeMetaData,
@@ -18,6 +17,5 @@ export const blockRouterMetaData = [
   Blok12BCMetaData,
   Block12ListsMetaData,
   BoxModelMetaData,
-
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
