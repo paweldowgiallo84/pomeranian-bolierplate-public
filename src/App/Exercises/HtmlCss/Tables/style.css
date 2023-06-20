@@ -1,0 +1,13 @@
+.dog-table {
+  
+  border-radius: 5px;
+}
+
+.dog-table tbody tr:nth-child(2n) {
+  background-color: aqua;
+}
+
+.dog-table tbody tr:hover {
+  background-color: bisque;
+ border: 3px solid;
+}
