@@ -1,5 +1,4 @@
 import './styles.css';
-// import { NotificationIcon } from '../Icons/Notification';
 import { TogleArrowIcon } from '../Icons/ToggleArrowIcon';
 import { Title } from './Title/Title';
 import { Author } from './Author/Author';
@@ -15,9 +14,6 @@ export const Blog = () => {
         Blog
       </h1>
       <div className="post post01">
-        {/* <div className="notif-icon">
-          
-        </div> */}
         <NotificationBell />
         <div>
           <span className="post-date">30-11-2022</span>
