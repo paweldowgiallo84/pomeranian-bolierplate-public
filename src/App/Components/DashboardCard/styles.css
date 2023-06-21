@@ -1,0 +1,79 @@
+.dashboard-card {
+    font-family: 'Poppins';
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 202px;
+    height: 192px;
+    padding: 20px 28px 20px 28px;
+
+    border: 1px solid #C8CBD1;
+    border-radius: 8px;
+    box-shadow: 0px 63.6618px 158.447px rgba(0, 0, 0, 0.06),
+        0px 32.2288px 69.073px rgba(0, 0, 0, 0.0405),
+        0px 12.7324px 25.7476px rgba(0, 0, 0, 0.03),
+        0px 2.7852px 9.16022px rgba(0, 0, 0, 0.0195);
+}
+
+.dashboard-card:hover {
+    transition: 0.5s linear;
+    box-shadow: 0px 63.6618px 158.447px rgba(254, 55, 86, 0.06),
+        0px 32.2288px 69.073px rgba(254, 55, 86, 0.0405),
+        0px 12.7324px 25.7476px rgba(254, 55, 86, 0.03),
+        0px 2.7852px 9.16022px rgba(254, 55, 86, 0.0195);
+}
+
+.dashboard-card .card-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    text-align: center;
+
+    width: 142px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.dashboard-card:hover .card-title {
+    transition: 0.5s linear;
+    color: #FE3756;
+}
+
+.dashboard-card .icon-wrapper {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.dashboard-card .card-description {
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.dashboard-card .card-link {
+    color: #FF4D69;
+    text-decoration: none;
+
+    margin-bottom: 20px;
+}
+
+.dashboard-card img:not(:hover) {
+    filter: saturate(0%);
+   
+
+}
+
+.dashboard-card:hover img {
+    transition: 0.5s;
+    filter: saturate(100%);
+}
