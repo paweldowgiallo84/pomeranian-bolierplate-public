@@ -10,6 +10,7 @@ import { BoxModelMetaData } from './BoxModel/router-data';
 import { TablesMetaData } from './Tables/router-data';
 import { Tables02RatingMetaData } from './Tables02Rating/router-data';
 import { FlexBoxAndGriMetaData } from './FlexBoxAndGrid/router-data';
+import { FloatsAndPositioningMetaData } from './FloatsAndPositioning/router-data';
 
 export const blockRouterMetaData = [
   HTMLAndCSSMetaData,
@@ -22,5 +23,6 @@ export const blockRouterMetaData = [
   TablesMetaData,
   Tables02RatingMetaData,
   FlexBoxAndGriMetaData,
+  FloatsAndPositioningMetaData,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);

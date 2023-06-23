@@ -1,0 +1,61 @@
+:root {
+    --secondary-cookies-agreement: #23213D;
+    --primary-cookies-btn: #FE3756;
+}
+
+.cookies-agreement {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    z-index: 4;
+    width: 100vw;
+    padding: 80px 120px;
+    bottom: 0px;
+    background-color: var(--secondary-cookies-agreement);
+    color: white;
+}
+
+.cookies-agreement .cookie-image {
+    float: left;
+    padding: 20px;
+}
+
+.cookies-agreement .cookie-btn {
+    display: flex;
+    margin-left: 56px;
+    gap: 16px;
+}
+
+.cookies-agreement .cookie-btn button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 13px;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.52px;
+    text-transform: uppercase;
+    height: 50px;
+    border-radius: 8px;
+    box-shadow: 0 3px 2px #424242;
+    padding: 20px 36px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.cookies-agreement .cookie-btn button:active {
+    box-shadow: 0 5px #2a2a2a;
+    transform: translateY(2px);
+  }
+
+button.agree {
+    background-color: var(--primary-cookies-btn);
+    color: white;
+}
+
+button.customize {
+    color: var(--primary-cookies-btn);
+}
