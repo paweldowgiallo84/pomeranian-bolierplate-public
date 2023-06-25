@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.css';
 import cookie from '../../Images/cookie.svg';
+import CookiesModal from './CookiesModal';
 
 const Cookies = () => {
-  const handleAgreement = () => {};
-  const handleAgreementCustomization = () => {};
+  const [akceptCookies, setAkceptCookies] = useState(true);
+
+  const handleAgreement = () => {
+    setAkceptCookies(false);
+  };
+
+  const [showAgrreementCustomization, setShowAgrreementCustomization] =
+    useState(false);
+
+  const showHandleAgreement = () => {
+    setShowAgrreementCustomization(true);
+  };
+
+  if (!akceptCookies) return null;
   return (
     <div className="cookies-agreement">
       <div className="cookie-agreement-text">
@@ -24,9 +37,16 @@ const Cookies = () => {
         <button className="agree" onClick={handleAgreement}>
           w porządku
         </button>
-        <button className="customize" onClick={handleAgreementCustomization}>
+        <button className="customize" onClick={showHandleAgreement}>
           Dopasuj zgody
         </button>
+        <CookiesModal
+          open={showAgrreementCustomization}
+          onClose={() => setShowAgrreementCustomization(false)}
+          onAkcept={
+            (() => setShowAgrreementCustomization(false), handleAgreement)
+          }
+        />
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ export const Dashboard = () => {
       sectionTitle: ' Ćwiczenia',
       icon: <img src={edit} alt="business card resume" />,
       description: 'wszystkie wykonane ćwiczenia',
-      link: '/excercise',
+      link: '/exercises',
     },
     {
       sectionTitle: 'Blog',
@@ -72,7 +72,7 @@ export const Dashboard = () => {
         <h3 className="user-name">Paweł Dowgiałło</h3>
         <p className="user-location">Gdańsk</p>
         <div className="user-email">
-          <p>e-mail:</p> 
+          <p>e-mail:</p>
           <p>dowgiallo.pawel@gmail.com</p>
         </div>
         <div className="user-phone-number">

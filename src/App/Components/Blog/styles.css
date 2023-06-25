@@ -11,9 +11,11 @@
 .notif-icon {
     position: absolute;
     left: 970px;
+    opacity: 0;
+    scale: 0.2;
 }
 
-.blog {
+.blog h1 {
     display: flex;
     margin-top: 51px;
     margin-left: 31px;
@@ -34,13 +36,44 @@
     margin-bottom: 34px;
     padding: 45px 61px;
     gap: 10px;
-  
+
     width: 1034px;
     height: fit-content;
     left: 268px;
     top: 220px;
 
-    cursor:pointer;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(246, 246, 246, 1);
+    box-shadow: 0px -4px 26px rgba(0, 0, 0, 0.08), 0px 17px 35px rgba(0, 0, 0, 0.05),
+        0px 8px 20px rgba(0, 0, 0, 0.04), 0px 65px 30px rgba(0, 0, 0, 0.01);
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.post:active {
+    background-color: #23213D;
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+.post:active .notif-icon {
+    position: absolute;
+    left: 970px;
+    opacity: 1;
+    scale: 1;
+    transition: 1s linear;
+}
+
+.post:active .author {
+    color: white;
+}
+
+.post:active .links a:visited {
+    color: white;
+
 }
 
 .post-date {
@@ -103,29 +136,29 @@
 
 }
 
-.post01 {
+/* .post01 {
     position: relative;
     top: 0px;
     left: 0px;
     background-color: #23213D;
     border-radius: 8px;
     color: #ffffff;
-}
+} */
 
-.post01 span {
+/* .post01 span {
     color: #ffffff;
-}
+} */
 
-.post02 {
+/* .post02 {
     background-color: rgba(244, 245, 247, 1);
     border-radius: 8px;
-}
+} */
 
 .post02 p {
     font-style: italic;
 }
 
-.post03 {
+/* .post03 {
     position: relative;
     top: 0px;
     left: 0px;
@@ -133,7 +166,7 @@
     box-shadow: 0px -4px 26px rgba(0, 0, 0, 0.08), 0px 17px 35px rgba(0, 0, 0, 0.05),
         0px 8px 20px rgba(0, 0, 0, 0.04), 0px 65px 30px rgba(0, 0, 0, 0.01);
     border-radius: 8px;
-}
+} */
 
 .links a:visited {
     color: #222222;

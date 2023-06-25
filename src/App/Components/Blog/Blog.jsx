@@ -3,16 +3,19 @@ import { TogleArrowIcon } from '../Icons/ToggleArrowIcon';
 import { Title } from './Title/Title';
 import { Author } from './Author/Author';
 import { NotificationBell } from './NotificationBell/NotificationBell';
+import { useState } from 'react';
 
 export const Blog = () => {
   return (
     <div>
-      <h1 className="blog">
-        <div className="toggle-arrow-icon">
-          <TogleArrowIcon />
-        </div>
-        Blog
-      </h1>
+      <p className="blog">
+        <h1 className="title">
+          <div className="toggle-arrow-icon">
+            <TogleArrowIcon />
+          </div>
+          Blog
+        </h1>
+      </p>
       <div className="post post01">
         <NotificationBell />
         <div>
@@ -42,6 +45,7 @@ export const Blog = () => {
       </div>
 
       <div className="post post02">
+        <NotificationBell />
         <div>
           <span className="post-date">30-11-2022</span>
           <Title text="I make mistakes!" />
@@ -64,6 +68,7 @@ export const Blog = () => {
       </div>
 
       <div className="post post03">
+        <NotificationBell />
         <div>
           <span className="post-date">30-11-2022</span>
           <Title text="18 Record-Breaking, Controversial, and Weird Facts" />

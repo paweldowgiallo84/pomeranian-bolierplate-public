@@ -8,9 +8,12 @@ import { ReactMockup01MetaData } from './ReactMockup01/router-data';
 
 import { Block9MetaData } from './Block9/router-data';
 
+import { MaterialUIBasicElementsMetaData } from './MaterialUIBasicElements/router-data';
+
 export const blockRouterMetaData = [
   ReactMockup01MetaData,
   Block9MetaData,
+  MaterialUIBasicElementsMetaData,
   ReactRouterEventsMetaData,
   ReactRouterEventsMetaData,
   ReactRouterEventsMetaData,

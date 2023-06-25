@@ -116,6 +116,15 @@ font-size: 18px;
     border-radius: 8px;
 }
 
+.content .save-for-later-btn:hover {
+    cursor: pointer;
+}
+
+.content .save-for-later-btn:active {
+    box-shadow: 1px 1px;
+    transform: translateY(-2px);
+}
+
 .content .container-content-lorem {
     text-align: justify;
 }
