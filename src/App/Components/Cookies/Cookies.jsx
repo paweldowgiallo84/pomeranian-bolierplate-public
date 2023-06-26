@@ -4,10 +4,15 @@ import cookie from '../../Images/cookie.svg';
 import CookiesModal from './CookiesModal';
 
 const Cookies = () => {
-  const [akceptCookies, setAkceptCookies] = useState(true);
+  const setCookieState = () => {
+    localStorage.setItem('cookieState', 1);
+  };
+  const [refresh, setRefresh] = useState();
 
   const handleAgreement = () => {
-    setAkceptCookies(false);
+    setCookieState();
+    setShowAgrreementCustomization(false);
+    setRefresh({});
   };
 
   const [showAgrreementCustomization, setShowAgrreementCustomization] =
@@ -17,7 +22,7 @@ const Cookies = () => {
     setShowAgrreementCustomization(true);
   };
 
-  if (!akceptCookies) return null;
+  if (localStorage.getItem('cookieState') == 1) return null;
   return (
     <div className="cookies-agreement">
       <div className="cookie-agreement-text">
@@ -53,14 +58,3 @@ const Cookies = () => {
 };
 
 export default Cookies;
-
-// function setCookieState() { localStorage.... autorstwa Łukasz Formela
-//   Łukasz Formela
-//   21:10
-
-//   function setCookieState() {
-//   localStorage.setItem("cookieState", 1);
-//   }
-//   function getCookieState() {
-//   return localStorage.getItem("cookieState");
-//   }
