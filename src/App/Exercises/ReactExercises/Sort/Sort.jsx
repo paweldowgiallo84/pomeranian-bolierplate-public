@@ -16,5 +16,9 @@ export const SortImmute = () => {
     sortedArr, // [1, 2, 3]
   });
 
-  return <div className="click5"></div>;
+  return (
+    <div className="sort">
+      <p>1. </p>
+    </div>
+  );
 };
