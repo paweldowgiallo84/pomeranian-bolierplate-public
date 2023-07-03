@@ -1,10 +1,15 @@
 .dashboard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard-main {
     font-family: 'Poppins';
     display: flex;
     flex-direction: column;
 }
 
-.dashboard .dashboard-hello {
+.dashboard-main .dashboard-hello {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -12,12 +17,12 @@
 
 }
 
-.dashboard .hand-img {
+.dashboard-main .hand-img {
     width: 22px;
     height: 22px;
 }
 
-.dashboard .dashboard-title {
+.dashboard-main .dashboard-title {
     font-style: normal;
     font-weight: 500;
     font-size: 22px;
@@ -27,12 +32,12 @@
     color: #FE3756;
 }
 
-.dashboard .dashboard-description {
+.dashboard-main .dashboard-description {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 34px;
-   margin: 0px;
+    margin: 0px;
 }
 
 .dashboard-content {
@@ -41,4 +46,33 @@
     gap: 35px 35px;
     flex-wrap: wrap;
     padding: 44px 51px;
+}
+
+.dashboard .user-info {
+    width: 434px;
+    height: fit-content;
+    padding-top: 45px;
+    padding-left: 23px;
+    margin-top: 30px;
+    margin-left: min(30px);
+    
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.02);
+}
+
+.user-info .user-image {
+    height: 90px;
+}
+
+.user-info p {
+    font-size: 14px;    
+    line-height: 20px;
+    
+    font-family: Poppins;
+}
+
+.user-info .user-name {
+    font-size: 22px;
+    font-weight: 500;
 }

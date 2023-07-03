@@ -1,0 +1,30 @@
+.cookieModalMain {
+    position: fixed;
+    top: 30%;
+    left: 30%;
+}
+
+.modalContainer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 5em;
+    width: 40vw;
+    height: 40vh;
+    background-color: var(--secondary-cookies-agreement);
+    border-radius: 8px;
+}
+
+.cookies-customization-content {
+  width: 60%;
+  font-size: 24px;
+  text-align: justify;
+
+}
+
+.cookies-btn {
+    display: flex;
+    gap: 4em;   
+    margin-bottom: 4em;
+    }

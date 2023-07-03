@@ -37,8 +37,6 @@ export function AppHeader() {
         >
           <img src={arrowDown} className="arrow" alt="" />
         </button>
-
-        {/* <div className="header-title"></div> */}
       </div>
     </header>
   );
