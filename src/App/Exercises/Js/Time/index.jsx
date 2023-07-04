@@ -17,6 +17,7 @@ export const Time = () => {
   function stopTimer() {
     setIsCountingDown(false);
   }
+  //TODO starting and stoping timer.
 
   useEffect(() => {
     let intervalId;

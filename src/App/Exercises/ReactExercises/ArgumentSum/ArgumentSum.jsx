@@ -9,8 +9,8 @@ const sumOfParam = (...args) => {
   return sumOfArguments;
 };
 
-console.log(sumOfParam(1, 2, 3, 4, 5, 6, 7, 8, 9));
-console.log(sumOfParam(1, 2, 3, 4, 5, 6, 7, 'hello', 8, 9));
+// console.log(sumOfParam(1, 2, 3, 4, 5, 6, 7, 8, 9));
+// console.log(sumOfParam(1, 2, 3, 4, 5, 6, 7, 'hello', 8, 9));
 
 export const ArgumentSum = () => {
   return (
