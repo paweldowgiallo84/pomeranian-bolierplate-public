@@ -7,6 +7,7 @@ import { blockRouterMetaData as blockRouterMetaDataNumberIf } from './NumberIf/r
 import { JsNumbersTrainingMetaData } from './JsNumbersTraining/router-data';
 import { blockRouterMetaData as EmptyValuesAndComments } from './EmptyValuesAndComments/router-data';
 import { blockRouterMetaData as JsArrayBasics } from './JsArrayBasics/router-data';
+import { blockRouterMetaData as TimeExercises } from './Time/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -16,5 +17,6 @@ export const blockRouterMetaData = [
   JsNumbersTrainingMetaData,
   EmptyValuesAndComments,
   JsArrayBasics,
+  TimeExercises,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
