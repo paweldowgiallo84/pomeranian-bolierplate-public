@@ -1,0 +1,102 @@
+.wackTheMoleMain {
+    font-family: Poppins;
+    font-size: 18px;
+    line-height: 31px;
+    letter-spacing: 0em;
+
+    margin-left: 31px;
+}
+
+.wackTheMoleMain .title {  
+    font-weight: 700;     
+    text-align: left;
+    display: flex;
+
+    height: 34px;
+    margin: 0px;
+    margin-top: 48px;
+}
+
+.title .arrow_icon {
+    transform: rotateZ(90deg);
+    margin-right: 5px;
+}
+
+.wtm_game_rules>p {
+    height: 34px;
+    margin: 0px;
+    margin-top: 11px;
+}
+
+.wackTheMoleMain .wtm_optins {
+    display: flex;
+    flex-direction: column;
+
+    font-weight: 500;
+}
+
+.wtm_optins .wtm_option_settings {
+    display: flex;
+    flex-direction: row;
+    margin-top: 28px;
+}
+
+.wtm_option_settings .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 200px;
+    padding: 0px;
+}
+
+.description>p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.wtm_options_btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-content: space-around;
+    width: 537px;
+    height: 244px;
+    margin-left: 41px;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.btns button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0em;    
+    width: 163px;
+    height: 56px;
+    margin: 0px;
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+}
+
+.wackTheMoleMain .btn {   
+    width: 163px;
+    height: 56px;
+    margin: 0px;
+    background-color: #23213D;
+  }
+.wackTheMoleMain .activ_btn {
+    background-color: #FE3756;
+}
+
+.wackTheMoleMain .btn:hover {
+    opacity: 0.9;
+    transition: 0.3s linear;
+}

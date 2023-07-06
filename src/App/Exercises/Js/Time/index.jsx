@@ -21,13 +21,13 @@ export const Time = () => {
 
   useEffect(() => {
     let intervalId;
-    if (isCountingDown) {
-      if (seconds !== 0) {
-        intervalId = setInterval(() => {
-          setSeconds(seconds - 1);
-        }, 1000);
-      }
+
+    if (seconds !== 0) {
+      intervalId = setInterval(() => {
+        setSeconds(seconds - 1);
+      }, 1000);
     }
+
     return () => clearInterval(intervalId);
   }, [seconds]);
 
