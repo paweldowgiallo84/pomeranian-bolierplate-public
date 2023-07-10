@@ -7,8 +7,29 @@
     margin-left: 31px;
 }
 
-.wackTheMoleMain .title {  
-    font-weight: 700;     
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 550px;
+    height: 216px;
+    margin-top: 118px;
+    margin-left: 260px;
+
+}
+
+.board>span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 104px;
+    width: 104px;
+    background-color: #EBEBEB;
+    border-radius: 8px;
+}
+
+.wackTheMoleMain .title {
+    font-weight: 700;
     text-align: left;
     display: flex;
 
@@ -78,7 +99,7 @@
     font-size: 18px;
     font-weight: 500;
     line-height: 31px;
-    letter-spacing: 0em;    
+    letter-spacing: 0em;
     width: 163px;
     height: 56px;
     margin: 0px;
@@ -86,12 +107,13 @@
     color: rgb(255, 255, 255);
 }
 
-.wackTheMoleMain .btn {   
+.wackTheMoleMain .btn {
     width: 163px;
     height: 56px;
     margin: 0px;
     background-color: #23213D;
-  }
+}
+
 .wackTheMoleMain .activ_btn {
     background-color: #FE3756;
 }
@@ -99,4 +121,15 @@
 .wackTheMoleMain .btn:hover {
     opacity: 0.9;
     transition: 0.3s linear;
+}
+
+.btns .scoreAndTime {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 163px;
+    height: 56px;
+    margin: 0px;
+    border-radius: 8px;
+    background-color: #EBEBEB;
 }

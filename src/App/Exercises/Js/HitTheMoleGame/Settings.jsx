@@ -1,14 +1,13 @@
-import { TogleArrowIcon } from './images/ToggleArrowIcon';
-
 export const GameSettings = ({
   gameTime,
   howManyMoles,
   setHowManyMoles,
   setGameTime,
   startTimer,
+  seconds,
 }) => {
   const gameTimeSelector = [
-    { label: '1 minuta', timeValue: 1 * 60 * 1000 },
+    { label: '1 minuta', timeValue: 0.1 * 60 * 1000 },
     { label: '2 minuty', timeValue: 2 * 60 * 1000 },
     { label: '3 minuty', timeValue: 3 * 60 * 1000 },
   ];
@@ -21,29 +20,11 @@ export const GameSettings = ({
 
   return (
     <div className="wackTheMoleMain">
-      <p className="title">
-        <span className="arrow_icon">
-          <TogleArrowIcon />
-        </span>
-        KRET
-      </p>
       <div className="wtm_optins">
-        <div className="wtm_game_rules">
-          <p>
-            Gra polegająca na podążaniu za krecikiem i trafieniu na kwadrat, w
-            którym się pojawił.
-          </p>
-        </div>
         <div className="wtm_option_settings">
           <div className="description">
-            <p>
-              CZAS GRY: {gameTime / 60 / 1000}
-              {gameTime > 1 * 60 * 1000 ? ' minuty' : ' minuta'}
-            </p>
-            <p>
-              LICZBA KRETÓW: {howManyMoles}{' '}
-              {howManyMoles > 1 ? ' krety' : ' kret'}
-            </p>
+            <p>CZAS GRY:</p>
+            <p>LICZBA KRETÓW:</p>
             <p>PRZYCISKI STERUJĄCE</p>
           </div>
 
