@@ -5,6 +5,9 @@ export const GameResult = ({ scoreCount, gameTime }) => {
   return (
     <div className="wackTheMoleMain">
       <h2>
+        Twój najepsy wynik to {localStorage.getItem('highscore')} punktów.
+      </h2>
+      <h2>
         Gratulacje! Twój wynik to: {scoreCount}
         {scoreCount === 1
           ? ' złapany '

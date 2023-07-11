@@ -34,6 +34,13 @@ export function HitTheMoleGame() {
     setShowMoles((current) => !current);
   };
 
+  const hihgScore = (scoreCount) => {
+    let score = localStorage.getItem('highscore');
+    scoreCount > score
+      ? localStorage.setItem('highscore', scoreCount + 1)
+      : console.log(score);
+  };
+
   useEffect(() => {
     setSeconds(gameTime / 1000);
   }, [gameTime]);
@@ -45,12 +52,13 @@ export function HitTheMoleGame() {
       intervalId = setInterval(() => {
         setSeconds((prevSeconds) => prevSeconds - 1);
         if (seconds <= 0 || seconds < 1 || scoreCount >= 19) {
-          setSeconds(0);
+          clearInterval(intervalId);
+          setIsCountingDown(false);
         }
       }, 1000);
     }
     return () => clearInterval(intervalId);
-  }, [seconds]);
+  }, [seconds, isCountingDown]);
 
   // ---vvvvvvvvvvvvvvvvvvvvv--- generate random moles using Math.random ---------------
 
@@ -95,6 +103,7 @@ export function HitTheMoleGame() {
       setMoleArray((prevValue) => {
         const newMoleArray = [...prevValue];
         newMoleArray[index].isVisible = false;
+        hihgScore(scoreCount);
         return newMoleArray;
       });
     }
