@@ -53,10 +53,10 @@ const Exercise = () => {
   );
 };
 
-const symbol = [];
-window.addEventListener('keydown', (e) => {
-  symbol.push(e.key);
-  console.log(e);
-});
+// const symbol = [];
+// window.addEventListener('keydown', (e) => {
+//   symbol.push(e.key);
+//   console.log(e);
+// });
 
 export default Exercise;
