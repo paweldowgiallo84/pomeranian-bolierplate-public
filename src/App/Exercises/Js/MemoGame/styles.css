@@ -133,4 +133,5 @@
 
 .closed {
     background-color: rgb(206, 111, 111);
+    border-radius: 8px;
 }

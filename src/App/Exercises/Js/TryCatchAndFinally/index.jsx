@@ -1,92 +1,102 @@
-import { useState } from 'react';
-import './styles.css';
+import React, { useEffect, useState } from 'react';
+/*
+API is needed to deliver an id based on provided user name lenght.
+In HTML is needed an input for that
+*/
 
-const objectToEncode = {
-  1: [],
-  2: {},
-  3: 1,
-  4: Boolean(1),
-  5: 'string',
-  data: 12321321321321321321312,
-};
+const ping = 5 * 1000;
 
-export function LocalStorageExercise() {
-  const UNIQE_LOCALSTORAGE_KEY = 'nameKey';
-  const UNIQUE_OBJECT_DATA_LS_KEY = 'objectUniqueKey';
+const api = (userName) =>
+  new Promise((resolve, reject) => {
+    // Let's assume we have heavy load under this URL
+    const mockedResponseFromServer = userName.length;
 
-  const [getLocalStorageData, setLocalStorageData] = useState('');
+    setTimeout(() => {
+      resolve({
+        data: { id: mockedResponseFromServer },
+        status: 200,
+        message: 'OK',
+      });
+    }, ping);
+  });
 
-  const handleSave = () => {
-    localStorage.setItem(UNIQE_LOCALSTORAGE_KEY, getLocalStorageData);
-    return console.log('Zapisano dane w Local Storage', getLocalStorageData);
+const TryCatchAndFinally = () => {
+  const [userName, setUserName] = useState('');
+
+  useEffect(() => {
+    const getUserId = async (userName) => {
+      if (!userName) return;
+      try {
+        const { data } = await api(userName);
+        console.log('dla uzytkownika id to ' + data.id);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    getUserId(userName);
+  }, [userName]);
+
+  const addName = (userName) => {
+    setUserName(userName);
   };
 
-  const handleRead = () => {
-    const getLocalStorageNameData = localStorage.getItem(
-      UNIQE_LOCALSTORAGE_KEY
-    );
-    return console.log(
-      'Odczytano dane z Local Storage',
-      getLocalStorageNameData
-    );
-  };
-
-  const handleClear = () => {
-    const storedData = localStorage.removeItem(UNIQE_LOCALSTORAGE_KEY);
-    return console.log('Usunieto dane z Local Storage', storedData);
-  };
-
-  const stringifyObject = () => {
-    // it's encoding the data and making JSON object
-    // we preparing data to send
-    const objectToEncodeJSON = JSON.stringify(objectToEncode);
-    return objectToEncodeJSON;
-  };
-
-  const parseJsonObject = () => {
-    const objectToDecode = JSON.parse(stringifyObject());
-    return console.log(objectToDecode);
-  };
-  parseJsonObject();
-
-  //generic functions
-  const genericParseJsonObjects = (jsonObject) => {
-    const objectToDecode = JSON.parse(jsonObject);
-    return objectToDecode;
-  };
-
-  //set object to local storage
-
-  const setDataToLocalStorage = () => {
-    const storedData = localStorage.setItem(
-      UNIQUE_OBJECT_DATA_LS_KEY,
-      stringifyObject()
-    );
-    return storedData;
-  };
-  setDataToLocalStorage();
-
-  const getDataFromLocalStorage = () => {
-    const dataFromLS = genericParseJsonObjects(
-      localStorage.getItem(UNIQUE_OBJECT_DATA_LS_KEY)
-    );
-
-    console.log('decoded data with specyfic key: ', dataFromLS[5]);
-    return console.log('decode data from LS - ', dataFromLS);
-  };
-  getDataFromLocalStorage();
-  //end set object to local storage
+  console.log(userName);
 
   return (
-    <div className="container-local-storage">
+    <div>
       <input
         type="text"
-        value={getLocalStorageData}
-        onChange={(event) => setLocalStorageData(event.target.value)}
+        placeholder="enter user name"
+        value={userName}
+        onChange={(event) => setUserName(event.target.value)}
       />
-      <button onClick={handleSave}>Zapisz</button>
-      <button onClick={handleRead}>Odczytaj</button>
-      <button onClick={handleClear}>Wyczyść</button>
     </div>
   );
+};
+
+export default TryCatchAndFinally;
+
+/*
+const myFun = async () => {
+  const obiecanki = new Promise((resolve, reject)=> {
+    const user = {name: "Łukasz", surname:"Formela"}
+    resolve(user);
+  });
+
+ 
+
+  try {
+    const {name} = await obiecanki
+    console.log(name);
+  } catch(e) {
+    console.error(e)
+  }
 }
+
+ 
+
+ 
+
+const myFun = async () => {
+  const obiecanki = new Promise((resolve, reject)=> {
+    const user = {name: "Łukasz", surname:"Formela"}
+    resolve(user);
+  });
+
+ 
+
+  try {
+    const user = await obiecanki
+    console.log(user);
+  } catch(e) {
+    console.error(e)
+  }
+}
+
+
+const obiecanki = new Promise((resolve, reject)=> {
+  const user = {name: "Łukasz", surname:"Formela"}
+  resolve(user);
+}).then((user) => `${user.name} ${user.surname}`).catch(err=>console.error(err))
+
+*/

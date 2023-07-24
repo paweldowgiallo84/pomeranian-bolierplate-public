@@ -62,6 +62,21 @@ export const MemoGame = () => {
   };
   //------------------------end-----generating-random-character-array----------
 
+  const inspectChar = (card) => {
+    if (pickFirst) {
+      setPickSeccond(card);
+    } else setPickFirst(card);
+
+    card.isVisible = true;
+    console.log(card);
+  };
+
+  function nextTurn() {
+    setPickFirst(null);
+    setPickSeccond(null);
+    setSteps((prevSteps) => prevSteps + 1);
+  }
+
   //-------------------------------------------------------------------
 
   useEffect(() => {
@@ -76,8 +91,10 @@ export const MemoGame = () => {
             }
           });
         });
+
         nextTurn();
       } else {
+        console.log('dupa');
         setTimeout(() => nextTurn(), 1000);
       }
     }
@@ -86,36 +103,13 @@ export const MemoGame = () => {
   //-------------------------------------------------------------
 
   //-----------------------------------------------------------------------------
-  function inspectChar(card) {
-    //   // if (!card.isVisible || !card.isGuessed) {
-    //   //   setPickFirst(card);
-    //   //   setShuffleChars.isVisible = true;
-    //   //   console.log(pickFirst);
-    //   // }
-
-    if (pickFirst) {
-      setPickSeccond(card);
-    } else {
-      setPickFirst(card);
-      setShuffleChars.isVisible = true;
-    }
-    console.log(card);
-  }
-
-  // console.log(pickFirst, pickSeccond);
-
-  function nextTurn() {
-    setPickFirst(null);
-    setPickSeccond(null);
-    setSteps((prevSteps) => prevSteps + 1);
-  }
 
   function classOfElement(card) {
     const classes = ['cell'];
     if (card.isGuessed) {
       classes.push('guessed');
     }
-    if (!card.isVisible && !card.isGuessed) {
+    if (card.isVisible && !card.isGuessed && pickFirst && pickSeccond) {
       classes.push('closed');
     }
     return classes.join(' ');

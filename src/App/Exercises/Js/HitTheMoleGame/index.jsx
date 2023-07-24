@@ -71,6 +71,10 @@ export function HitTheMoleGame() {
 
     const randomMole = getRandomMole(0, moleArray.length - 1);
 
+    console.log(randomMole);
+
+    debugger;
+
     setMoleArray((prevMoleArray) =>
       prevMoleArray.map((mole, index) => {
         mole.isVisible = false;

@@ -1,9 +1,9 @@
 import React from 'react';
 
 const UsersList = ({ userArray }) => {
- const removeUser = () => {
-  console.log()
- }
+  const removeUser = () => {
+    console.log();
+  };
 
   return (
     <div className="users-section">

@@ -5,12 +5,10 @@ const Gameboard = ({ shuffleChars, inspectChar, classOfElemen }) => {
     <div>
       <div className="memo_board">
         {shuffleChars.map((card) => (
-          <span
-            className={classOfElemen(card)}
-            onClick={() => inspectChar(card)}
-            key={card.id}
-          >
-            <span>{(card.isVisible || card.isGuessed) && card.character}</span>
+          <span onClick={() => inspectChar(card)} key={card.id}>
+            <span className={classOfElemen(card)}>
+              {(card.isVisible || card.isGuessed) && card.character}
+            </span>
           </span>
         ))}
       </div>

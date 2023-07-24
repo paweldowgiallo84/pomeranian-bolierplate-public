@@ -4,8 +4,8 @@
   line-height: 27px;
   font-size: 16px;
   display: flex;
-  justify-content: space-between;
-  width: 750px;
+  justify-content: flex-start;
+  min-width: 750px;
   margin-top: 162px;
   margin-left: 44px;
 }
@@ -13,6 +13,7 @@
 .add-user-container .user-input-section {
   display: flex;
   flex-direction: column;
+  margin-right: 150px;
 }
 
 .user-input-section .user-nick-input {
@@ -44,7 +45,7 @@
 
 .add-user-container .users-section {
   min-height: 280px;
-    width: 235px;
+  min-width: 235px;
   border: 1px solid rgba(128, 128, 128, 0.485);
   border-radius: 8px;
 }
@@ -74,6 +75,7 @@
   color: #fff;
   height: 26px;
   width: 26px;
+  margin-left: 20px;
   background-color: #FE3756;
   border-radius: 8px;
 }

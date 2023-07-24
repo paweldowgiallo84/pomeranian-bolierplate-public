@@ -1,17 +1,10 @@
-import { LocalStorageExercise } from '.';
+import TryCatchAndFinally from '.';
 
 export const blockRouterMetaData = {
-  path: 'js-storae',
+  path: 'try-catch-and-finally',
   date: null,
-  linkLabel: 'JSON, XML, localstorage',
+  linkLabel: 'try Catch and Finally',
   blockNo: 32,
-  element: <LocalStorageExercise />,
-  tags: ['JSOC', 'localsrotage', 'js'],
+  element: <TryCatchAndFinally />,
+  tags: ['try', 'catch', 'finally', 'javascript'],
 };
-
-
-ścieżka: src/App/Exercises/js/
-nazwa folderu i pliku: tryCatchAndFinally
-nazwa linku: 'try Catch and Finally'
-route: 'try-catch-and-finally'
-tags: ['try', 'catch', 'finally', 'javascript']
