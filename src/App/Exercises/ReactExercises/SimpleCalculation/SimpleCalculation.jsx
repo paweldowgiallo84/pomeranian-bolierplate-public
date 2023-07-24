@@ -15,13 +15,13 @@ const calculateWithChar = (operator, valueA, valueB) => {
   }
 };
 
-console.log(
-  calculateWithChar('+', 1, 2),
-  calculateWithChar('*', 1, 2),
-  calculateWithChar('/', 1, 2),
-  calculateWithChar('---', 1, 2),
-  calculateWithChar('+', 'abc', 2)
-);
+// console.log(
+//   calculateWithChar('+', 1, 2),
+//   calculateWithChar('*', 1, 2),
+//   calculateWithChar('/', 1, 2),
+//   calculateWithChar('---', 1, 2),
+//   calculateWithChar('+', 'abc', 2)
+// );
 
 export const SimpleCalculation = () => {
   return (

@@ -1,0 +1,81 @@
+.add-user-container {
+  font-family: 'Poppins';
+  font-weight: 700;
+  line-height: 27px;
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-start;
+  min-width: 750px;
+  margin-top: 162px;
+  margin-left: 44px;
+}
+
+.add-user-container .user-input-section {
+  display: flex;
+  flex-direction: column;
+  margin-right: 150px;
+}
+
+.user-input-section .user-nick-input {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  padding-left: 16px;
+  height: 48px;
+  width: 285px;
+  margin-left: 50px;
+  border: 1px solid rgba(128, 128, 128, 0.485);
+  border-radius: 8px;
+}
+
+.user-input-section .user-input-btn {
+  font-size: 18px;
+  font-weight: 500;
+  height: 56px;
+  width: 163px;
+  margin-top: 38px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FE3756;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.add-user-container .users-section {
+  min-height: 280px;
+  min-width: 235px;
+  border: 1px solid rgba(128, 128, 128, 0.485);
+  border-radius: 8px;
+}
+
+.users-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 38px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.users-section .user {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.user .user-remove-btn {
+  font-weight: 500;
+  font-size: 18;
+  line-height: 31;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  height: 26px;
+  width: 26px;
+  margin-left: 20px;
+  background-color: #FE3756;
+  border-radius: 8px;
+}

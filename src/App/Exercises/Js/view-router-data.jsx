@@ -7,6 +7,16 @@ import { blockRouterMetaData as blockRouterMetaDataNumberIf } from './NumberIf/r
 import { JsNumbersTrainingMetaData } from './JsNumbersTraining/router-data';
 import { blockRouterMetaData as EmptyValuesAndComments } from './EmptyValuesAndComments/router-data';
 import { blockRouterMetaData as JsArrayBasics } from './JsArrayBasics/router-data';
+import { blockRouterMetaData as TimeExercises } from './Time/router-data';
+import { blockRouterMetaData as HitTheMOleGame } from './HitTheMoleGame/router-data';
+import { blockRouterMetaData as MemoGame } from './MemoGame/router-data';
+import { blockRouterMetaData as LocalStorageExercise } from './Exercise-js-local-storage/router-data';
+import { blockRouterMetaData as AddUserLocalStorae } from './Add-User_local_storage/router-data';
+import { blockRouterMetaData as TryCatchAndFinally } from './TryCatchAndFinally/router-data';
+import { blockRouterMetaData as TryCatch } from './TryCatch/router-data';
+import { blockRouterMetaData as Prototypes } from './Prototypes/router-data';
+import { blockRouterMetaData as ThisKeyword } from './ThisKeyword/router-data';
+import { blockRouterMetaData as TicTacToe } from './TicTacToe/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -16,5 +26,15 @@ export const blockRouterMetaData = [
   JsNumbersTrainingMetaData,
   EmptyValuesAndComments,
   JsArrayBasics,
+  TimeExercises,
+  HitTheMOleGame,
+  MemoGame,
+  LocalStorageExercise,
+  AddUserLocalStorae,
+  TryCatchAndFinally,
+  TryCatch,
+  Prototypes,
+  ThisKeyword,
+  TicTacToe,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);

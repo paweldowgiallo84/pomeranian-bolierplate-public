@@ -19,8 +19,7 @@ function hasEnough(hasEnough) {
 }
 
 function circleArea(radius) {
-let circleAreaResult = '';
-
+  let circleAreaResult = '';
 }
 
 export function JsNumbersTraining() {
