@@ -1,6 +1,14 @@
 import React from 'react';
 
-const Cell = ({ cell, id, setBoard, ticTacToe, setTicTacToe, board, whoWins }) => {
+const Cell = ({
+  cell,
+  id,
+  setBoard,
+  ticTacToe,
+  setTicTacToe,
+  board,
+  whoWins,
+}) => {
   const handleClick = (e) => {
     const ticOrToe =
       e.target.firstChild.classList.contains('circle') ||
