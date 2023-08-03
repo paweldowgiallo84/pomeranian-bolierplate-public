@@ -1,0 +1,15 @@
+.todo__error {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.todo__container .todo__btn {
+  width: 163px;
+  height: 56px;
+  background-color: #23213D;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+}

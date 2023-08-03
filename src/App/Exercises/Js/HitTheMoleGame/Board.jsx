@@ -3,7 +3,7 @@ import moleImg from './images/mole.png';
 
 import './styles.css';
 
-const GameBoard = ({ moleArray, hitTheMole, scoreCount, seconds }) => {
+const GameBoard = ({ moleArray, hitTheMole }) => {
   return (
     <div>
       <div className="board">

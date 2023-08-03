@@ -63,19 +63,23 @@ const Calculator = () => {
     let previousOutputValue = previousOutput.slice(0, -2);
     switch (operatorSymbol) {
       case '/': {
-        setCurrentOutput(Number(previousOutputValue) / Number(currentOutput));
+        setPreviousOutput(Number(previousOutputValue) / Number(currentOutput));
+        setCurrentOutput('0');
         break;
       }
       case '*': {
-        setCurrentOutput(Number(previousOutputValue) * Number(currentOutput));
+        setPreviousOutput(Number(previousOutputValue) * Number(currentOutput));
+        setCurrentOutput('0');
         break;
       }
       case '+': {
-        setCurrentOutput(Number(previousOutputValue) + Number(currentOutput));
+        setPreviousOutput(Number(previousOutputValue) + Number(currentOutput));
+        setCurrentOutput('0');
         break;
       }
       case '-': {
-        setCurrentOutput(Number(previousOutputValue) - Number(currentOutput));
+        setPreviousOutput(Number(previousOutputValue) - Number(currentOutput));
+        setCurrentOutput('0');
         break;
       }
       default:
