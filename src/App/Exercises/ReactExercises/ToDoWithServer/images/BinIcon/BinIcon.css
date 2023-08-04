@@ -1,0 +1,11 @@
+.bin-icon path{
+    stroke: #000;
+}
+
+.bin-icon:hover path{
+    stroke: rgb(0, 0, 255);
+}
+
+.bin-icon--error path{
+    stroke: #f00;
+}

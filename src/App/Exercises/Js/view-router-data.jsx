@@ -17,6 +17,9 @@ import { blockRouterMetaData as TryCatch } from './TryCatch/router-data';
 import { blockRouterMetaData as Prototypes } from './Prototypes/router-data';
 import { blockRouterMetaData as ThisKeyword } from './ThisKeyword/router-data';
 import { blockRouterMetaData as TicTacToe } from './TicTacToe/router-data';
+import { blockRouterMetaData as ExercisiesFetch } from './Js-exercisies-fetch/router-index';
+import { blockRouterMetaData as PromisesMethodsTraining } from './PromiseMethodsTraining/router-data';
+import { blockRouterMetaData as BasicCalculator } from './Calculator/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -36,5 +39,8 @@ export const blockRouterMetaData = [
   Prototypes,
   ThisKeyword,
   TicTacToe,
+  ExercisiesFetch,
+  PromisesMethodsTraining,
+  BasicCalculator,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);

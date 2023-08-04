@@ -1,0 +1,127 @@
+.container--promises {
+    margin: 0;
+    padding: 0;
+}
+
+.container--grid-wraper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.container--grid-tile {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    height: 400px;
+    background-image: linear-gradient(rgb(154, 158, 161), rgb(197, 198, 199));
+    text-transform: capitalize;
+    border: 8px solid rgba(244, 173, 58, 0.252);
+    border-radius: 10px;
+}
+
+.container--grid-grass {
+    background-image: linear-gradient(rgb(114, 204, 106), rgb(170, 225, 170));
+}
+
+.container--grid-fire {
+    background-image: linear-gradient(rgb(255, 164, 94), rgb(250, 187, 139));
+}
+
+.container--grid-water {
+    background-image: linear-gradient(rgb(92, 155, 217), rgb(110, 183, 255));
+}
+
+.container--grid-bug {
+    background-image: linear-gradient(#C6D16E, #edf3c3);
+}
+
+.container--grid-poison {
+    background-image: linear-gradient(#9141CB, #c27bf5);
+}
+
+.container--grid-electric {
+    background-image: linear-gradient(#f5d848, #e7d88c);
+}
+
+.container--grid-ground {
+    background-image: linear-gradient(#d77946, #f7b38f);
+}
+
+.container--grid-fairy {
+    background-image: linear-gradient(#f4a7ef, #dc60d4);
+}
+
+.container--grid-fighting {
+    background-image: linear-gradient(#d55d7f, #ca4d70);
+}
+
+.container--grid-psychic {
+    background-image: linear-gradient(#f8868a, #F97277);
+}
+
+.container--grid-rock {
+    background-image: linear-gradient(#c5bca3, #C8B88C);
+}
+
+.container--grid-ghost {
+    background-image: linear-gradient(#6577ae, #5169AE);
+}
+
+.container--grid-ice {
+    background-image: linear-gradient(#8fd4c9, #75CFC1);
+}
+
+.container--grid-dragon {
+    background-image: linear-gradient(#2e85cb, #036DC5);
+}
+
+.container--grid-dark {
+    background-image: linear-gradient(#676270, #5A5366);
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+}
+
+.pokemon-name {
+    font-size: 21px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.pokemon-hp {
+    font-size: 21px;
+    color: rgb(173, 40, 40);
+}
+
+.pokemon-image {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0 5px 0;
+}
+
+.pokemon-image>img {
+    width: 200px;
+    border: 5px solid rgba(255, 217, 0, 0.399);
+}
+
+.pokemon-type {
+    width: 30px;
+
+}
+
+.pokemon-type-weight-height {
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-around;
+    width: 85%;
+    margin: 0 auto;
+   
+
+    background-color: rgba(225, 190, 12, 0.178);
+}

@@ -28,8 +28,7 @@ export function TicTacToe() {
     [0, 4, 8],
     [2, 4, 6],
   ];
-  // console.log(winingArrays);
-
+ 
   const winingArray = () => {
     winingArrays.forEach((Array) => {
       let circleWins = Array.every((cell) => board[cell] === 'circle');
@@ -65,12 +64,3 @@ export function TicTacToe() {
     </div>
   );
 }
-
-// (board[0] === 'circle' && board[1] === 'circle' && board[2] === 'circle') ||
-// (board[3] === 'circle' && board[4] === 'circle' && board[5] === 'circle') ||
-// (board[6] === 'circle' && board[7] === 'circle' && board[8] === 'circle') ||
-// (board[0] === 'circle' && board[3] === 'circle' && board[6] === 'circle') ||
-// (board[1] === 'circle' && board[4] === 'circle' && board[7] === 'circle') ||
-// (board[2] === 'circle' && board[5] === 'circle' && board[8] === 'circle') ||
-// (board[0] === 'circle' && board[4] === 'circle' && board[8] === 'circle') ||
-// (board[2] === 'circle' && board[4] === 'circle' && board[6] === 'circle')

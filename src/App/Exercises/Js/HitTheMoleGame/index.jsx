@@ -28,10 +28,10 @@ export function HitTheMoleGame() {
   };
 
   const stopTimer = () => {
-    setGameTime(DEFAULT_GAME_TIME);
     setScoreCount(0);
     setIsCountingDown((current) => !current);
     setShowMoles((current) => !current);
+    setGameTime(DEFAULT_GAME_TIME);
   };
 
   const hihgScore = (scoreCount) => {
@@ -51,7 +51,7 @@ export function HitTheMoleGame() {
     if (isCountingDown) {
       intervalId = setInterval(() => {
         setSeconds((prevSeconds) => prevSeconds - 1);
-        if (seconds <= 0 || seconds < 1 || scoreCount >= 19) {
+        if (seconds <= 0 || seconds < 1 || scoreCount >= 99) {
           clearInterval(intervalId);
           setIsCountingDown(false);
         }
@@ -73,8 +73,6 @@ export function HitTheMoleGame() {
 
     console.log(randomMole);
 
-    debugger;
-
     setMoleArray((prevMoleArray) =>
       prevMoleArray.map((mole, index) => {
         mole.isVisible = false;
@@ -93,7 +91,7 @@ export function HitTheMoleGame() {
     if (isCountingDown) {
       intervalId = setInterval(() => {
         showRandomMole();
-      }, moleSpede);
+      }, moleSpede / 1.8);
     }
 
     return () => clearInterval(intervalId);
@@ -116,7 +114,7 @@ export function HitTheMoleGame() {
   return (
     <>
       <TitleAndDescription />
-      {seconds <= 0 || seconds < 1 ? (
+      {seconds <= 0 || seconds < 1 || scoreCount >= 99 ? (
         <GameResult scoreCount={scoreCount} gameTime={gameTime} />
       ) : null}
       {!isCountingDown ? (
