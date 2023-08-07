@@ -1,3 +1,7 @@
+.todo__container {
+  width: fit-content;
+}
+
 .todo__error {
   font-size: 18px;
   font-weight: 600;
@@ -13,3 +17,10 @@
   border: 0;
   border-radius: 8px;
 }
+
+.todo__button_addItem {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 23px;
+  margin-right: 13px;
+  }

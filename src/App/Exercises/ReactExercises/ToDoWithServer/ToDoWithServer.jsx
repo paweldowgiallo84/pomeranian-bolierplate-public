@@ -2,36 +2,60 @@ import axios from 'axios';
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import './style.css';
-import ToDoItem from './components/ToDoItem';
-import Title from './components/Title';
-import ErrorPage from './components/ErrorPage';
-import TodoForm from './components/TodoForm';
+import ToDoItem from './components/ToDoItem/ToDoItem';
+import Title from './components/Title/Title';
+import TodoForm from './components/TodoForm/TodoForm';
+import ErrorPage from './components/ErrorPage/ErrorPage';
+import EmptyList from './components/EmptyList/EmptyList';
 
 export const BASE_API_URL = 'http://localhost:3333/api';
+const TIMEOUT_DURRATION = 5000;
 
 const ToDoWithServer = () => {
   const [todoList, setTodoList] = useState([]);
   const [error, setError] = useState('');
-  const [isAddPageShown, setIsAddPageShow] = useState(false);
+  const [isFormVisible, setFormVisible] = useState(false);
 
-  const handleFetchTodoData = async () => {
-    const timeoutDuration = 5000;
+  const [idForEdit, setIdForEdit] = useState(null);
+
+  const handleFetchTodoData = async (givenID = undefined) => {
+    const isGetSpecifcMode = Boolean(givenID);
+
+    const urlSuffix = isGetSpecifcMode ? `/${givenID}` : '';
 
     try {
-      const fetchDataPromise = axios.get(`${BASE_API_URL}/todo`);
+      const fetchDataPromise = axios.get(`${BASE_API_URL}/todo${urlSuffix}`);
       const timeoutPromise = new Promise((_, reject) => {
-        setTimeout(() => reject(new Error('Timeout')), timeoutDuration);
+        setTimeout(
+          () => reject(new Error('Response timeout')),
+          TIMEOUT_DURRATION
+        );
       });
       const response = await Promise.race([fetchDataPromise, timeoutPromise]);
 
       if (!response) {
-        setError('Przekroczono czas oczekiwania na odpowiedź serwera');
+        setError('Timed out waiting for a response from the server');
       }
       setError('');
-      setTodoList(response.data);
+
+      if (isGetSpecifcMode) {
+        const updatedTodo = response.data;
+
+        setTodoList(
+          todoList.map((todo) => {
+            if (todo.id === updatedTodo.id) {
+              return updatedTodo;
+            }
+            return todo;
+          })
+        );
+      } else {
+        setTodoList(response.data);
+      }
     } catch (error) {
       setError(
-        'Wystpił błąd podczas komunikacji z serwerem: ' + error?.message
+        'An error occurred while communicating with the server: ' +
+          error?.message
       );
     }
   };
@@ -43,8 +67,16 @@ const ToDoWithServer = () => {
   return (
     <div className="todo__container">
       <Title />
-      {isAddPageShown && <TodoForm setIsAddPageShow={setIsAddPageShow} />}
-      {!isAddPageShown &&
+      {isFormVisible && (
+        <TodoForm
+          setFormVisible={setFormVisible}
+          handleFetchTodoData={handleFetchTodoData}
+          data={todoList.find((todo) => todo.id === idForEdit)}
+          setIdForEdit={setIdForEdit}
+        />
+      )}
+      {!isFormVisible &&
+        !todoList.length <= 0 &&
         (error ? (
           <ErrorPage error={error} />
         ) : (
@@ -55,14 +87,17 @@ const ToDoWithServer = () => {
                 todoList={todoList}
                 key={todoList.id}
                 handleFetchTodoData={handleFetchTodoData}
+                setIdForEdit={setIdForEdit}
+                setFormVisible={setFormVisible}
               />
             );
           })
         ))}
-      <div>
-        {!isAddPageShown && (
-          <button className="todo__btn" onClick={() => setIsAddPageShow(true)}>
-            DODAJ
+      {todoList <= 0 && !isFormVisible && <EmptyList />}
+      <div className="todo__button_addItem">
+        {!isFormVisible && (
+          <button className="todo__btn" onClick={() => setFormVisible(true)}>
+            ADD
           </button>
         )}
       </div>

@@ -1,24 +1,23 @@
 import React from 'react';
-import './ErrorPage.css';
+import './EmptyList.css'
 
-const ErrorPage = ({ error }) => {
+const EmptyList = () => {
   const handleClickRefresh = () => window.location.reload();
-
   return (
     <>
-      <div className="todo__error">
-        <span className="todo__error__info">
-          Przepraszamy. Nie udało się pobrać listy zadań. {error}
+      <div className="todo__empty-list">
+        <span className="todo__empty-list__info">
+          You currently have no tasks to complete
         </span>
         <button
           onClick={handleClickRefresh}
           className="todo__btn--refresh-list"
         >
-          ODŚWIEŻ WIDOK
+          REFRESH THE VIEW
         </button>
       </div>
     </>
   );
 };
 
-export default ErrorPage;
+export default EmptyList;

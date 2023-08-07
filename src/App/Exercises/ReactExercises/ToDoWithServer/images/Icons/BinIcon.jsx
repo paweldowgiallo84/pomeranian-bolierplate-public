@@ -1,8 +1,7 @@
-import { colors } from '@mui/material';
-import './BinIcon.css';
+import './Icons.css';
 
 export function BinIcon({ isError }) {
-  const svgClassname = `bin-icon${isError ? '--error' : ''}`;
+  const svgClassname = `icon${isError ? '--error' : ''}`;
 
   return (
     <svg

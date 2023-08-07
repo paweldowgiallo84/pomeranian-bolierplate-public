@@ -44,6 +44,10 @@
     border-radius: 8px;   
 }
 
+.todo__bin {
+    cursor: pointer;
+}
+
 .todo__form-buttons {
     display: flex;
     justify-content: flex-end;
@@ -53,4 +57,16 @@
 
 .todo__form-buttons .form__btn:disabled {
     background-color: red;
+}
+
+.todo__inProgress {
+    color: blue;
+}
+
+.todo__isError {
+    color: red;
+}
+
+.todo__isSucces {
+    color: green;
 }
