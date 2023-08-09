@@ -1,5 +1,5 @@
 import React from 'react';
-import { TogleArrowIcon } from '../../../../Components/Icons/ToggleArrowIcon';
+import { TogleArrowIcon } from '../../../../../Components/Icons/ToggleArrowIcon';
 import './Title.css';
 
 const Title = () => {

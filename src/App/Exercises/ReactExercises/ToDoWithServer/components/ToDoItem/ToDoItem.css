@@ -44,7 +44,7 @@
 }
 
 .todo__is-done {
-    margin-top: 32px;
+    margin-top: 32px;    
 }
 
 .todo__text {
@@ -56,35 +56,7 @@
     font-size: 12px;
 }
 
-.todo__empty-list {
-    font-family: 'Poppins';
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    margin: auto;
-    margin-top: 60px;
-    text-align: center;
-}
-
-.todo__empty-list__info {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 34px;
-}
-
-.todo__btn--refresh-list {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 31px;
-    color: rgb(255, 255, 255);
-    height: 56px;
-    background-color: rgba(254, 55, 86, 1);
-    margin: 36px 0;
-    border: 0;
-    border-radius: 8px;
-}
-
-.todo__bin {
+.todo__icon {
     border: 0;
     background-color: rgb(255, 255, 255, 0);
 }

@@ -1,0 +1,11 @@
+.icon path{
+    stroke: #000000;
+}
+
+.icon:hover path{
+    stroke: rgb(0, 0, 255);
+}
+
+.icon--error path{
+    stroke: #f00;
+}
