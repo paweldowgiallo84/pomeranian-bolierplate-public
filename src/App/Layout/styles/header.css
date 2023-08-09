@@ -25,12 +25,10 @@ header .logo {
   pointer-events: none;
 }
 
-.profil-image {
+.profil-image img{
   width: 49px;
   height: 49px;
-  border-radius: 50%;
-  background-color: rgba(200, 203, 209, 1);
-}
+  }
 
 .menu {
   display: flex;

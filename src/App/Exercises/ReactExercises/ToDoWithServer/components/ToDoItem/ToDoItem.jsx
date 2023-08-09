@@ -15,7 +15,6 @@ const ToDoItem = ({
 }) => {
   const [isRemoveError, setIsRemoveError] = useState(false);
   const { isDone, id, title, author, createdAt, note, doneDate } = todoList;
-  // const handleClickRefresh = () => window.location.reload();
 
   const handleDeleteListItem = () => {
     axios

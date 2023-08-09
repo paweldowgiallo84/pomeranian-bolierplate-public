@@ -7,6 +7,7 @@ import { MaterialUIBasicElementsMetaData } from './MaterialUIBasicElements/route
 import { Block21MetaData } from './Block 21/router-data';
 import { LocalDevAndFetchMetaData } from './LocalDevAndFetch/router-data';
 import { ToDoWithServerMetaData } from './ToDoWithServer/router-data';
+import { ReactUseRefMetaData } from './ReactUseRef/router-data';
 
 export const blockRouterMetaData = [
   ReactMockup01MetaData,
@@ -19,5 +20,6 @@ export const blockRouterMetaData = [
   Block21MetaData,
   LocalDevAndFetchMetaData,
   ToDoWithServerMetaData,
+  ReactUseRefMetaData,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
