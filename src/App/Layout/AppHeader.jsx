@@ -5,6 +5,7 @@ import { Logo } from '../Components/Logo/Logo';
 import { Link } from 'react-router-dom';
 import arrowDown from '../Images/toggle-arrow.svg';
 import settingsIcon from '../Images/setting.svg';
+import user from '../Images/user-image.png';
 
 export function AppHeader() {
   return (
@@ -23,7 +24,9 @@ export function AppHeader() {
         </button>
 
         <div className="user-profile">
-          <div className="profil-image"></div>
+          <div className="profil-image">
+            <img src={user} alt="user_avatar" />
+          </div>
           <div className="user">
             <p className="user-name">Paweł</p>
             <p className="user-position">kursant</p>

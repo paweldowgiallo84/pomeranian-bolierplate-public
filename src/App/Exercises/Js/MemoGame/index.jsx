@@ -95,6 +95,7 @@ export const MemoGame = () => {
         nextTurn();
       } else {
         console.log('dupa');
+
         setTimeout(() => nextTurn(), 1000);
       }
     }
