@@ -1,0 +1,65 @@
+.order__form-container {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: fit-content;
+    padding: 65px 0 65px 82px;
+
+    background-color: #F4F5F7;
+    border-radius: 8px;
+    box-shadow: px 65px 30px 0px #00000003,
+        0px 8px 20px 0px #0000000A,
+        0px 17px 35px 0px #0000000D,
+        0px -4px 26px 0px #00000014,
+    ;
+}
+
+.order__form-container .submit__btn {
+    align-self: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    width: fit-content;
+    height: 56px;
+    padding: 12px 145px;
+    background-color: #FE3756;
+    border: 0;
+    border-radius: 8px;
+}
+
+.produkt__option--selector {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    width: 488px;
+    height: 48px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    padding: 13px 16px;
+}
+
+.order__form-container .input--area {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    width: 488px;
+    height: 48px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    padding: 13px 16px;
+}
+
+.order__form-container .input--additional-order-comments {
+    min-height: 169px;
+    resize: none;
+}
+
+.input__value--error {
+    font-size: 12px;
+    color: red;
+}
+
+.consent__styling {
+    color: red;
+}
+

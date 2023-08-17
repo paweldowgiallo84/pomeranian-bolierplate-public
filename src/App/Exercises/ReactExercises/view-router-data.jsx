@@ -8,6 +8,7 @@ import { Block21MetaData } from './Block 21/router-data';
 import { LocalDevAndFetchMetaData } from './LocalDevAndFetch/router-data';
 import { ToDoWithServerMetaData } from './ToDoWithServer/router-data';
 import { ReactUseRefMetaData } from './ReactUseRef/router-data';
+import { OrderFormMetaData } from './OrderForm/router-data';
 
 export const blockRouterMetaData = [
   ReactMockup01MetaData,
@@ -21,5 +22,6 @@ export const blockRouterMetaData = [
   LocalDevAndFetchMetaData,
   ToDoWithServerMetaData,
   ReactUseRefMetaData,
+  OrderFormMetaData,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);

@@ -1,0 +1,53 @@
+
+
+label {
+    display: block;
+    width: fit-content;
+}
+
+input[type='radio'] {
+    height: 16px;
+    width: 16px;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    margin-right: 10px;
+    margin-top: 5px;
+    }
+
+    input, label {
+        cursor: pointer;
+    }
+
+.paymentOption__radio-btn--custom {
+    appearance: none;     
+    background-color: #F4F5F7;
+    border-radius: 50%;
+}
+
+.paymentOption__radio-btn--custom:hover {
+    box-shadow: 0 0 0 1px rgb(0, 0, 0, 0.1);
+}
+
+.paymentOption__radio-btn--custom:checked {
+    outline-offset: 2px;
+    outline: 1px solid #FE3756;
+    background-color: #FE3756;
+    animation-name: outline-checked;
+    animation-duration: 0.2s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.paymentOption__radio-btn--custom:focus-visible {
+    outline-offset: 2px;
+}
+
+@keyframes outline-checked {
+    0% {
+        outline-offset: 0;
+    }
+
+    100% {
+        outline-offset: 2px;
+    }
+}
