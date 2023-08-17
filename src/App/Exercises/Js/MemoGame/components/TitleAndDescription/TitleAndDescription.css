@@ -1,0 +1,18 @@
+.memo_game_main .title {
+    display: flex;
+    font-weight: bold;
+    font-weight: 700;
+    text-align: left;
+    height: 34px;
+    margin: 0px;
+    margin-top: 48px;
+}
+
+.memo_arrow_icon {
+    transform: rotateZ(90deg);
+    margin-right: 10px;
+}
+
+.memo_rules {
+    margin-bottom: 28px;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const StartButton = ({ startStopGame, isGameStarted }) => {
+const StartButton = ({ startStopGame, isGameStarted, gameStop }) => {
   return (
     <div>
       <div className="memo_game_main">
@@ -10,7 +10,7 @@ const StartButton = ({ startStopGame, isGameStarted }) => {
           </div>
           <div className="btns">
             <button className="btn" onClick={() => startStopGame()}>
-              {!isGameStarted ? 'START' : 'STOP'}
+              {!isGameStarted ? 'START' : !gameStop ? 'STOP' : 'RESET'}
             </button>
           </div>
         </div>

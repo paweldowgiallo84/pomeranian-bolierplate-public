@@ -1,0 +1,31 @@
+.memo_board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 700px;
+    height: fit-content;
+    margin-top: 118px;
+    margin-left: 260px;
+}
+
+.memo_board>span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+    background-color: #EBEBEB;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.memo_board .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+    font-size: 72px;
+}

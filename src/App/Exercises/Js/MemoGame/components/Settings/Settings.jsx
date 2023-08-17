@@ -1,10 +1,11 @@
 import React from 'react';
+import './Settings.css'
 
 const Settings = ({ boardSize, setBoardSize }) => {
   const gameElementSelector = [
-    { label: '8 elementów', sizeValue: 8 },
-    { label: '16 elementów', sizeValue: 16 },
-    { label: '20 elementów', sizeValue: 20 },
+    { label: '8 elementów', sizeValue: 8, id: 0 },
+    { label: '16 elementów', sizeValue: 16, id: 1 },
+    { label: '20 elementów', sizeValue: 20, id: 2 },
   ];
 
   return (
@@ -15,8 +16,8 @@ const Settings = ({ boardSize, setBoardSize }) => {
             <span>LICZBA ELEMENTÓW</span>
           </div>
           <div className="btns">
-            {gameElementSelector.map(({ label, sizeValue }) => (
-              <button
+            {gameElementSelector.map(({ label, sizeValue, id }) => (
+              <button key={id}
                 className={
                   boardSize === sizeValue ? 'activ_memo_btn' : 'memo_btn'
                 }

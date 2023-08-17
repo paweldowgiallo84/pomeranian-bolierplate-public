@@ -1,0 +1,8 @@
+.memo_btn {
+    background-color: #23213D;
+    border: 0;
+}
+
+.memo_game_main .activ_memo_btn {
+    background-color: #FE3756;
+}
