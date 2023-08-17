@@ -1,4 +1,5 @@
 import React from 'react';
+import './GameInProgress.css'
 
 const GameInProgress = ({ seconds, steps }) => {
   let minutesToFinish = Math.floor(seconds / 60);

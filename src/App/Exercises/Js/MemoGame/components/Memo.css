@@ -1,0 +1,47 @@
+.memo_game_main {
+    font-family: Poppins;
+    font-size: 18px;
+    line-height: 31px;
+    letter-spacing: 0em;
+    margin-left: 31px;
+}
+
+.memo_option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.memo_option .description {
+    width: 188px;
+    margin-right: 42px;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.btns button {
+    width: 163px;
+}
+
+.cell:hover {
+    scale: 1.1;
+    transition: 0.3s ease-in-out;
+}
+
+.cell:active {
+    scale: 1.1;
+}
+
+.guessed {
+    background-color: rgb(162, 231, 162);
+}
+
+.closed {
+    background-color: rgb(206, 111, 111);
+    border-radius: 8px;
+}
