@@ -24,15 +24,9 @@ export const GameInProgress = ({ stopTimer, seconds, scoreCount }) => {
             </div>
 
             <div className="btns">
-              {seconds === 0 ? (
-                <button className="btn" onClick={() => stopTimer()}>
-                  Restart
-                </button>
-              ) : (
-                <button className="btn" onClick={() => stopTimer()}>
-                  Stop
-                </button>
-              )}
+              <button className="btn" onClick={() => stopTimer()}>
+                Stop
+              </button>
             </div>
           </div>
         </div>

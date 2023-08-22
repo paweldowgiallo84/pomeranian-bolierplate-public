@@ -41,6 +41,12 @@ export const Dashboard = () => {
       description: 'odpowiedzi na najczęstsze pytania',
       link: '/faq',
     },
+    // {
+    //   sectionTitle: 'Simple Games',
+    //   icon: <img src={edit} alt="business card resume" />,
+    //   description: 'małe i proste gierki w react.js',
+    //   link: '/games',
+    // },
   ]);
 
   return (

@@ -20,18 +20,19 @@ export function HitTheMoleGame() {
   const [isCountingDown, setIsCountingDown] = useState(false);
   const [scoreCount, setScoreCount] = useState(0);
   const [showMoles, setShowMoles] = useState(false);
+  const [randomMoles, setRandomMoles] = useState([]);
 
   const startTimer = () => {
+    setGameTime(gameTime);
+    setScoreCount(0);
     setSeconds(seconds - 1);
     setIsCountingDown((current) => !current);
     setShowMoles((current) => !current);
   };
 
   const stopTimer = () => {
-    setScoreCount(0);
     setIsCountingDown((current) => !current);
     setShowMoles((current) => !current);
-    setGameTime(DEFAULT_GAME_TIME);
   };
 
   const hihgScore = (scoreCount) => {
@@ -51,39 +52,48 @@ export function HitTheMoleGame() {
     if (isCountingDown) {
       intervalId = setInterval(() => {
         setSeconds((prevSeconds) => prevSeconds - 1);
-        if (seconds <= 0 || seconds < 1 || scoreCount >= 99) {
+        if (seconds <= 1 || scoreCount >= 200) {
+          stopTimer();
           clearInterval(intervalId);
-          setIsCountingDown(false);
         }
       }, 1000);
     }
     return () => clearInterval(intervalId);
-  }, [seconds, isCountingDown]);
-
-  // ---vvvvvvvvvvvvvvvvvvvvv--- generate random moles using Math.random ---------------
+  }, [seconds, isCountingDown, scoreCount]);
 
   const showRandomMole = () => {
+    let newRandomMoles = [];
+
     const getRandomMole = (min, max) => {
       min = Math.ceil(min);
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min + 1) + min);
     };
 
-    const randomMole = getRandomMole(0, moleArray.length - 1);
+    for (let i = 0; i < howManyMoles; i++) {
+      let randomMole;
+      do {
+        randomMole = getRandomMole(0, moleArray.length - 1);
+      } while (newRandomMoles.includes(randomMole));
 
-    console.log(randomMole);
+      newRandomMoles.push(randomMole);
+    }
+
+    setRandomMoles(newRandomMoles);
+
+    console.log('random moles: ', randomMoles);
 
     setMoleArray((prevMoleArray) =>
       prevMoleArray.map((mole, index) => {
         mole.isVisible = false;
-        const newMole = { ...mole };
-        newMole.isVisible = index === randomMole;
-        return newMole;
+        if (randomMoles.includes(index)) {
+          return { ...mole, isVisible: true };
+        }
+        return mole;
       })
     );
   };
-
-  // --------vvvvvvvvvvvv---------- refreshing moles generator with useEffect --------------------
+  console.log(moleArray);
 
   useEffect(() => {
     let intervalId;
@@ -91,11 +101,11 @@ export function HitTheMoleGame() {
     if (isCountingDown) {
       intervalId = setInterval(() => {
         showRandomMole();
-      }, moleSpede / 1.8);
+      }, moleSpede / 1.5);
     }
 
     return () => clearInterval(intervalId);
-  }, [seconds]);
+  }, [seconds, isCountingDown, randomMoles]);
 
   // ------------------------------------------
 
@@ -114,7 +124,7 @@ export function HitTheMoleGame() {
   return (
     <>
       <TitleAndDescription />
-      {seconds <= 0 || seconds < 1 || scoreCount >= 99 ? (
+      {!isCountingDown && scoreCount >= 1 ? (
         <GameResult scoreCount={scoreCount} gameTime={gameTime} />
       ) : null}
       {!isCountingDown ? (
@@ -131,8 +141,6 @@ export function HitTheMoleGame() {
         <GameInProgress
           gameTime={gameTime}
           howManyMoles={howManyMoles}
-          setHowManyMoles={setHowManyMoles}
-          setGameTime={setGameTime}
           stopTimer={stopTimer}
           seconds={seconds}
           scoreCount={scoreCount}
