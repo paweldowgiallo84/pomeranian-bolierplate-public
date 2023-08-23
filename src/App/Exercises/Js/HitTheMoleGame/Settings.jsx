@@ -4,7 +4,9 @@ export const GameSettings = ({
   setHowManyMoles,
   setGameTime,
   startTimer,
+  resetGame,
   seconds,
+  endGame,
 }) => {
   const gameTimeSelector = [
     { label: '1 minuta', timeValue: 0.1 * 60 * 1000 },
@@ -32,7 +34,14 @@ export const GameSettings = ({
             <div className="btns">
               {gameTimeSelector.map(({ label, timeValue }) => (
                 <button
-                  className={gameTime === timeValue ? 'activ_btn' : 'btn'}
+                  disabled={endGame}
+                  className={
+                    endGame
+                      ? 'btn--disabled'
+                      : gameTime === timeValue
+                      ? 'activ_btn'
+                      : 'btn'
+                  }
                   onClick={() => setGameTime(timeValue)}
                 >
                   {label}
@@ -43,8 +52,13 @@ export const GameSettings = ({
             <div className="btns">
               {molesCountOption.map(({ label }) => (
                 <button
+                  disabled={endGame}
                   className={
-                    howManyMoles === Number(label[0]) ? 'activ_btn' : 'btn'
+                    endGame
+                      ? 'btn--disabled'
+                      : howManyMoles === Number(label[0])
+                      ? 'activ_btn'
+                      : 'btn'
                   }
                   onClick={() => setHowManyMoles(Number(label[0]))}
                 >
@@ -54,9 +68,15 @@ export const GameSettings = ({
             </div>
 
             <div className="btns">
-              <button className="btn" onClick={() => startTimer()}>
-                Start
-              </button>
+              {endGame ? (
+                <button className="btn" onClick={() => resetGame()}>
+                  Reset
+                </button>
+              ) : (
+                <button className="btn" onClick={() => startTimer()}>
+                  Start
+                </button>
+              )}
             </div>
           </div>
         </div>
