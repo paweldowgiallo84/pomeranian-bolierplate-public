@@ -1,0 +1,20 @@
+.wackTheMoleMain {
+align-self: flex-start;
+}
+
+.start__stop__button {
+    display: flex;
+    align-items: center;
+    margin-top: 11px;
+}
+
+.start__stop__button .description {
+    width: 200px;
+}
+
+.start__stop__button .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin-left: 41px;
+}

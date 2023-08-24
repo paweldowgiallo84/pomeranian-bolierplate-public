@@ -1,4 +1,4 @@
-export const GameInProgress = ({ stopTimer, seconds, scoreCount }) => {
+export const GameInProgress = ({ seconds, scoreCount }) => {
   let minutesToFinish = Math.floor(seconds / 60);
   let secondsToFinish = seconds % 60;
   return (
@@ -8,7 +8,6 @@ export const GameInProgress = ({ stopTimer, seconds, scoreCount }) => {
           <div className="description">
             <p>CZAS DO KOŃCA: </p>
             <p>WYNIK: </p>
-            <p>PRZYCISKI STERUJĄCE</p>
           </div>
 
           <div className="wtm_options_btns">
@@ -21,12 +20,6 @@ export const GameInProgress = ({ stopTimer, seconds, scoreCount }) => {
 
             <div className="btns">
               <span className="scoreAndTime">{scoreCount}</span>
-            </div>
-
-            <div className="btns">
-              <button className="btn" onClick={() => stopTimer()}>
-                Stop
-              </button>
             </div>
           </div>
         </div>

@@ -1,15 +1,14 @@
+import './Settings.css';
+
 export const GameSettings = ({
   gameTime,
   howManyMoles,
   setHowManyMoles,
   setGameTime,
-  startTimer,
-  resetGame,
-  seconds,
   endGame,
 }) => {
   const gameTimeSelector = [
-    { label: '1 minuta', timeValue: 0.1 * 60 * 1000 },
+    { label: '1 minuta', timeValue: 1 * 60 * 1000 },
     { label: '2 minuty', timeValue: 2 * 60 * 1000 },
     { label: '3 minuty', timeValue: 3 * 60 * 1000 },
   ];
@@ -27,7 +26,6 @@ export const GameSettings = ({
           <div className="description">
             <p>CZAS GRY:</p>
             <p>LICZBA KRETÓW:</p>
-            <p>PRZYCISKI STERUJĄCE</p>
           </div>
 
           <div className="wtm_options_btns">
@@ -65,18 +63,6 @@ export const GameSettings = ({
                   {label}
                 </button>
               ))}
-            </div>
-
-            <div className="btns">
-              {endGame ? (
-                <button className="btn" onClick={() => resetGame()}>
-                  Reset
-                </button>
-              ) : (
-                <button className="btn" onClick={() => startTimer()}>
-                  Start
-                </button>
-              )}
             </div>
           </div>
         </div>
