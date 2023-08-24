@@ -1,4 +1,5 @@
-import { TogleArrowIcon } from './images/ToggleArrowIcon';
+import { TogleArrowIcon } from '../../images/ToggleArrowIcon';
+import './TitleAndDescription.css';
 
 export const TitleAndDescription = () => {
   return (

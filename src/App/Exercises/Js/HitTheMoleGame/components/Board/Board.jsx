@@ -1,7 +1,7 @@
 import React from 'react';
-import moleImg from './images/mole.png';
+import moleImg from '../../images/mole.png';
 
-import './styles.css';
+import '../styles.css';
 
 const GameBoard = ({ moleArray, hitTheMole }) => {
   return (

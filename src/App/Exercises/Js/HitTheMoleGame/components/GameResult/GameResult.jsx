@@ -22,7 +22,6 @@ export const GameResult = ({ scoreCount, gameTime }) => {
         w czasie
         {minutesOfGame.toString().padStart(2, 0)}:
         {secondsOfGame.toString().padStart(2, 0)}
-        {/* {gameTime / 1000} */}
       </h2>
     </div>
   );

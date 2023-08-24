@@ -1,0 +1,16 @@
+.wackTheMoleMain .title {
+    font-weight: 700;
+    height: 34px;
+    margin: 0px;
+    margin-top: 48px;
+}
+
+.title .arrow_icon {
+    margin-right: 5px;
+}
+
+.wtm_game_rules>p {
+    height: 34px;
+    margin: 0px;
+    margin-top: 11px;
+}
