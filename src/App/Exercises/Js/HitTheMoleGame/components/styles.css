@@ -110,3 +110,16 @@
     border-radius: 8px;
     background-color: #EBEBEB;
 }
+
+.moleHole {
+    cursor: pointer;
+}
+
+.moleHole:hover {
+    background-color: #dddddd;
+    transition: 0.3s ease-in-out;
+}
+
+.moleHole:active {
+    border: 1px solis #979797;
+}

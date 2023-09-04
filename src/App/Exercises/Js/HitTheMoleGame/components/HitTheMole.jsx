@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import GameBoard from './Board/Board';
 import { GameSettings } from './Settings/Settings';
 import { GameInProgress } from './GameInProgress/GameInProgress';
-import { TitleAndDescription } from './TitleAndDescription/TitleAndDescription';
 import { GameResult } from './GameResult/GameResult';
 import StartStopResetButton from './StartStopResetButton/StartStopResetButton';
 
@@ -75,7 +74,7 @@ export function HitTheMole() {
     if (isCountingDown) {
       intervalId = setInterval(() => {
         showRandomMole();
-      }, MOLE_SPEED / 1.8);
+      }, MOLE_SPEED / 1);
     }
 
     return () => clearInterval(intervalId);
@@ -161,6 +160,7 @@ export function HitTheMole() {
             hitTheMole={hitTheMole}
             scoreCount={scoreCount}
             seconds={seconds}
+            // classOfElement={classOfElement}
           />
         ) : null
       ) : null}
