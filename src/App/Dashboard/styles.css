@@ -1,6 +1,7 @@
 .dashboard {
     display: flex;
     justify-content: space-between;
+    padding-top: 50px;
 }
 
 .dashboard.noUI {
@@ -12,7 +13,9 @@
 .dashboard-main {
     font-family: 'Poppins';
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+    align-items: center;
+    text-align: center;    
 }
 
 .dashboard-main .dashboard-hello {
@@ -49,6 +52,7 @@
 .dashboard-content {
     max-width: 1100px;
     display: flex;
+    justify-content: center;
     gap: 35px 35px;
     flex-wrap: wrap;
     padding: 44px 51px;
@@ -97,6 +101,12 @@
 }
 
 @media (max-width: 700px) {
+    .dashboard {        
+        padding-top: 0px;
+    }
+    .dashboard.dashboard.noUI {        
+        padding-top: 0px;
+    }
     .user-info {
         display: none;
     }
@@ -110,7 +120,9 @@
         padding: 44px 24px;
         margin-left: auto;
         margin-right: auto;
-
+    }
+    .user-info {
+        display: none;
     }
 }
 

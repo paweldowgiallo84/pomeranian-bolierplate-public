@@ -4,10 +4,10 @@ import { useState } from 'react';
 import personalCard from '../Images/personalcard.svg';
 import edit from '../Images/edit.svg';
 import booksaved from '../Images/book-saved.svg';
-import code from '../Images/code.svg';
 import faq from '../Images/messages.svg';
 import hand from '../Images/waving-hand-sign.png';
 import user from '../Images/user-image.png';
+import techstack from '../Images/tech-stack/techstack.svg';
 
 const email = 'dowgiallopawel@gmail.com';
 const phone = '+48-512-236-361';
@@ -34,9 +34,9 @@ export const Dashboard = ({ userInfoIsVisible }) => {
     },
     {
       sectionTitle: 'Tech stack',
-      icon: <img src={code} alt="business card resume" />,
+      icon: <img src={techstack} alt="tech stack" />,
       description: 'stack technologiczny realizowany na kursie',
-      link: '/tech',
+      link: '/techstack',
     },
     {
       sectionTitle: 'FAQ',

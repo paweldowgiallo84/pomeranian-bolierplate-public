@@ -12,6 +12,7 @@ import { AppCalendar } from './App/Components/Calendar/Calendar';
 import { Settings } from './App/Components/Settings/Settings';
 import { Blog } from './App/Components/Blog/Blog';
 import { FAQ } from './App/Components/FAQ/FAQ';
+import { TechStack } from './App/Components/TechStack/TechStack';
 
 export function App() {
   const [userInfoIsVisible, setUserInfoIsVisible] = useState(false);
@@ -35,6 +36,7 @@ export function App() {
             element={<Dashboard userInfoIsVisible={userInfoIsVisible} />}
           />
           <Route path="CV/*" element={<CV />} />
+          <Route path="techstack/*" element={<TechStack />} />
           <Route path="exercises/*" element={<Exercises />} />
           <Route path="calendar/*" element={<AppCalendar />} />
           <Route path="blog/*" element={<Blog />} />

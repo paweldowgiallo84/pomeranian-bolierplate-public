@@ -11,6 +11,8 @@ import { FAQIcon } from '../Components/Icons/FAQ';
 import { BlogIcon } from '../Components/Icons/BlogIcon';
 import { CodeWarsIcon } from '../Components/Icons/CodeWarsIcon';
 import { CssBattleIcon } from '../Components/Icons/CssBattleIcon';
+import { TechStackIcon } from '../Components/Icons/TechStackIcon';
+
 
 export function AppAside() {
   return (
@@ -27,6 +29,12 @@ export function AppAside() {
             <NavLink className="aside-row" to="CV">
               <PersonalCardIcon />
               <div className="mobile__hiden-only">Moje CV</div>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="aside-row" to="techstack">
+              <TechStackIcon />
+              <div className="mobile__hiden-only">Tech Stack</div>
             </NavLink>
           </li>
           <li>
