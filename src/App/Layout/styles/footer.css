@@ -13,17 +13,34 @@ footer > * {
   display: flex;
 }
 
-footer .text-up {
-  align-items: flex-start;
-}
-
-footer .text-down {
-  align-items: flex-end;
-}
-
 footer a{
  text-align: right;
  width: 100%;
  display: block;
+}
+
+@media (max-width: 360px) {
+  footer {
+    min-height: 180px;
+    grid-template-rows: 1fr 1fr 1fr 2fr 2fr;
+    grid-template-columns: 1fr;
+    font-size: 14px;
+    border-radius: 0px 0px 10px 10px;
+  }
+footer div:first-of-type {
+  grid-area: 5/1/6/2
+}
+
+footer div:nth-of-type(2) {
+  grid-area: 6/1/7/2;
+}
+
+  footer .text-up {
+    justify-items: center;
+  }
+
+  footer .text-down {
+    justify-items: center;
+  }
 }
 

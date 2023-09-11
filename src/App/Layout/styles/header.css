@@ -8,7 +8,7 @@ header {
   justify-content: space-between;
   padding-left: 1.5rem;
   padding-right: 3rem;
-  box-shadow: 0px 1px 9px 0px var(--color-grey);
+
 }
 
 header>a:first-of-type {
@@ -25,10 +25,10 @@ header .logo {
   pointer-events: none;
 }
 
-.profil-image img{
+.profil-image img {
   width: 49px;
   height: 49px;
-  }
+}
 
 .menu {
   display: flex;
@@ -49,8 +49,8 @@ header .logo {
 }
 
 .menu .settings-btn:hover {
- border:  2px dotted lightgray;
- transition: 0.2s linear;
+  border: 2px dotted lightgray;
+  transition: 0.2s linear;
 }
 
 .menu .user-profile {
@@ -67,22 +67,88 @@ header .logo {
   font-size: 20px;
   font-weight: 600;
   line-height: 14px;
-  }
+}
 
 .user-name .user-position {
   font-size: 14px;
   font-weight: 100;
- }
+}
+
 .arrow-btn {
   border: none;
   background-color: transparent;
 }
 
- .arrow {
+.arrow {
   rotate: 90deg;
- }
+}
 
- .arrow:hover {
+.arrow.rotate {
   rotate: 0deg;
   transition: 0.1s linear;
- }
+}
+
+
+
+.test {
+  position: relative;
+  top: 16rem;
+  right: 5rem
+}
+
+@media (max-width: 768px) {
+  .menu .settings-btn {
+    display: none;
+  }
+}
+
+@media (max-width:530px) {
+  .arrow-btn {
+    display: none;
+  }
+
+  .user-profile {
+    margin-right: 24px;
+  }
+}
+
+@media (max-width: 470px) {
+  header {
+    padding-right: 1.5rem;
+  }
+
+  .user {
+    display: none;
+    margin-right: 24px;
+  }
+}
+
+@media (min-width:361px) {
+header {
+  box-shadow: 0px 1px 9px 0px var(--color-grey);
+}
+  .Logo__Pomeranian--small,
+  .header__sidebar__menu {
+    display: none;
+  }
+  .profile__image-icon {
+    display: none;
+  }
+}
+
+@media (max-width:360px) {
+.profile__imege-avatar {
+  display: none;
+}
+.profile__image-icon {
+  height: 26px;
+}
+
+  .Logo__Pomeranian--big {
+    display: none;
+  }
+
+  .Logo__Pomeranian--small {
+    height: 26px;
+  }
+}

@@ -1,4 +1,4 @@
-import ReduxTest from './ReduxTest';
+import { ReduxTest } from './ReduxTest';
 
 export const ReduxTestMetaData = {
   path: 'react-redux-test',

@@ -8,6 +8,9 @@ import { PersonalCardIcon } from '../Components/Icons/PersonalCardIcon';
 import { SettingIcon } from '../Components/Icons/SettingIcon';
 import { CalendarIcon } from '../Components/Icons/CalendarIcon';
 import { FAQIcon } from '../Components/Icons/FAQ';
+import { BlogIcon } from '../Components/Icons/BlogIcon';
+import { CodeWarsIcon } from '../Components/Icons/CodeWarsIcon';
+import { CssBattleIcon } from '../Components/Icons/CssBattleIcon';
 
 export function AppAside() {
   return (
@@ -17,55 +20,77 @@ export function AppAside() {
           <li>
             <NavLink className="aside-row" to="dashboard">
               <HouseIcon />
-              Dashboard
+              <div className="mobile__hiden-only">Dashboard</div>
             </NavLink>
           </li>
           <li>
             <NavLink className="aside-row" to="CV">
               <PersonalCardIcon />
-              Moje CV
+              <div className="mobile__hiden-only">Moje CV</div>
             </NavLink>
           </li>
           <li>
             <NavLink className="aside-row" to="blocks">
               <ElementIcon />
-              Bloki
+              <div className="mobile__hiden-only">Bloki</div>
             </NavLink>
           </li>
           <li>
             <NavLink className="aside-row" to="exercises">
               <EditIcon />
-              Ćwiczenia
+              <div className="mobile__hiden-only">Ćwiczenia</div>
             </NavLink>
           </li>
           <li>
             <NavLink className="aside-row" to="calendar">
               <CalendarIcon />
-              Kalendarz
+              <div className="mobile__hiden-only">Kalendarz</div>
             </NavLink>
           </li>
           <li>
             <NavLink className="aside-row" to="blog">
-              <CalendarIcon />
-              Blog
+              <BlogIcon />
+              <div className="mobile__hiden-only">Blog</div>
             </NavLink>
           </li>
           <li>
             <NavLink className="aside-row" to="faq">
               <FAQIcon />
-              FAQ
+              <div className="mobile__hiden-only">FAQ</div>
             </NavLink>
+          </li>
+          <hr />
+          <li>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className="aside-row"
+              href="https://www.codewars.com/users/paweldowgiallo84"
+            >
+              <CodeWarsIcon />
+              <div className="mobile__hiden-only">CodeWars</div>
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className="aside-row"
+              href="https://cssbattle.dev/player/M57uw8LegAcKBV8BHC0szQdWVTN2"
+            >
+              <CssBattleIcon />
+              <div className="mobile__hiden-only">Css Battle</div>
+            </a>
           </li>
           <hr />
           <li>
             <NavLink className="aside-row" to="settings">
               <SettingIcon />
-              Ustawienia
+              <div className="mobile__hiden-only">Ustawienia</div>
             </NavLink>
           </li>
         </ul>
       </nav>
-      <p style={{ padding: '1rem 0' }}>Sidebar items, widgets, etc</p>
     </aside>
   );
 }
