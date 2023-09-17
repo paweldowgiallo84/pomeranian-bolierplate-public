@@ -1,12 +1,9 @@
-import React from 'react';
-import './ReduxTest.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleProfile } from '../../../Store';
+import { selectProfile, toggleProfile } from '../../../Store/testSlice';
+import './ReduxTest.css';
 
 export const CardDetails = () => {
-  const profile = useSelector((state) => {
-    return state.testReducer.profile;
-  });
+  const profile = useSelector(selectProfile);
   return (
     <div>
       CardDetails {profile}
@@ -16,15 +13,14 @@ export const CardDetails = () => {
 };
 
 export const Accounts = () => {
-  const profile = useSelector((state) => {
-    return state.testReducer.profile;
-  });
-  const dispach = useDispatch();
+  const profile = useSelector(selectProfile);
+  const dispatch = useDispatch();
+
   return (
     <div>
       Accounts
       <div>Current profile: {profile}</div>
-      <button onClick={() => dispach(toggleProfile())}>Change profile</button>
+      <button onClick={() => dispatch(toggleProfile())}>Change profile</button>
     </div>
   );
 };
@@ -47,8 +43,7 @@ export const Dashboard = () => {
   );
 };
 
-const ReduxTest = () => {
-  // business, retail
+export const ReduxTest = () => {
   return (
     <div className="test-redux">
       Main Page
@@ -56,5 +51,3 @@ const ReduxTest = () => {
     </div>
   );
 };
-
-export default ReduxTest;

@@ -3,7 +3,6 @@ import { TogleArrowIcon } from '../Icons/ToggleArrowIcon';
 import { Title } from './Title/Title';
 import { Author } from './Author/Author';
 import { NotificationBell } from './NotificationBell/NotificationBell';
-import { useState } from 'react';
 
 export const Blog = () => {
   return (

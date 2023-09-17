@@ -10,6 +10,7 @@ import { ToDoWithServerMetaData } from './ToDoWithServer/router-data';
 import { ReactUseRefMetaData } from './ReactUseRef/router-data';
 import { OrderFormMetaData } from './OrderForm/router-data';
 import { ReduxTestMetaData } from './ReduxTest/router-data';
+import { ReduxCounterRefMetaData } from './ReduxCounter/router-data';
 
 export const blockRouterMetaData = [
   ReactMockup01MetaData,
@@ -24,6 +25,7 @@ export const blockRouterMetaData = [
   ToDoWithServerMetaData,
   ReactUseRefMetaData,
   OrderFormMetaData,
-  ReduxTestMetaData
+  ReduxTestMetaData,
+  ReduxCounterRefMetaData,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);

@@ -4,12 +4,15 @@ import { useState } from 'react';
 import personalCard from '../Images/personalcard.svg';
 import edit from '../Images/edit.svg';
 import booksaved from '../Images/book-saved.svg';
-import code from '../Images/code.svg';
 import faq from '../Images/messages.svg';
 import hand from '../Images/waving-hand-sign.png';
 import user from '../Images/user-image.png';
+import techstack from '../Images/tech-stack/techstack.svg';
 
-export const Dashboard = () => {
+const email = 'dowgiallopawel@gmail.com';
+const phone = '+48-512-236-361';
+
+export const Dashboard = ({ userInfoIsVisible }) => {
   const [availableCards, setAvailableCards] = useState([
     {
       sectionTitle: 'Moje CV',
@@ -31,9 +34,9 @@ export const Dashboard = () => {
     },
     {
       sectionTitle: 'Tech stack',
-      icon: <img src={code} alt="business card resume" />,
+      icon: <img src={techstack} alt="tech stack" />,
       description: 'stack technologiczny realizowany na kursie',
-      link: '/tech',
+      link: '/techstack',
     },
     {
       sectionTitle: 'FAQ',
@@ -43,8 +46,10 @@ export const Dashboard = () => {
     },
   ]);
 
+  console.log('UI', userInfoIsVisible);
+
   return (
-    <div className="dashboard">
+    <div className={!userInfoIsVisible ? 'dashboard noUI' : 'dashboard'}>
       <div className="dashboard-main">
         <div className="dashboard-hello">
           <img className="hand-img" src={hand} alt="waving hand img" />
@@ -54,10 +59,15 @@ export const Dashboard = () => {
           Poniżej znajdziesz najważniejsze informacje na temat mojej
           działalności
         </p>
-        <div className="dashboard-content">
+        <div
+          className={
+            !userInfoIsVisible ? 'dashboard-content noUI' : 'dashboard-content'
+          }
+        >
           {availableCards.map((card) => {
             return (
               <DashboardCard
+                key={card.sectionTitle}
                 sectionTitle={card.sectionTitle}
                 description={card.description}
                 link={card.link}
@@ -67,18 +77,23 @@ export const Dashboard = () => {
           })}
         </div>
       </div>
-      <div className="user-info">
-        <img className="user-image" src={user} alt="" />
-        <h3 className="user-name">Paweł Dowgiałło</h3>
-        <p className="user-location">Gdańsk</p>
-        <div className="user-email">
-          <p>e-mail:</p>
-          <p>dowgiallo.pawel@gmail.com</p>
+      {userInfoIsVisible && (
+        <div className="user-info">
+          <img className="user-image" src={user} alt="" />
+          <h3 className="user-name">Paweł Dowgiałło</h3>
+          <p className="user-location">Gdańsk</p>
+          <div className="user-email">
+            <p>
+              <a href={`mailto:${email}`}>{`Email: ${email}`}</a>
+            </p>
+          </div>
+          <div className="user-phone-number">
+            <p>
+              <a href={`tel:${phone}`}>{`Tel: ${phone}`}</a>
+            </p>
+          </div>
         </div>
-        <div className="user-phone-number">
-          <p>telefon: 512236361</p>
-        </div>
-      </div>
+      )}
     </div>
   );
 };

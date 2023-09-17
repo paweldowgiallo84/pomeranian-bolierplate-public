@@ -1,0 +1,8 @@
+.clock__mobile {
+    display: flex;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: -0.4px;
+    color: var(--color-white);    
+}

@@ -1,12 +1,21 @@
 .dashboard {
     display: flex;
     justify-content: space-between;
+    padding-top: 50px;
+}
+
+.dashboard.noUI {
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
 }
 
 .dashboard-main {
     font-family: 'Poppins';
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;    
 }
 
 .dashboard-main .dashboard-hello {
@@ -41,11 +50,20 @@
 }
 
 .dashboard-content {
-    max-width: 780px;
+    max-width: 1100px;
     display: flex;
+    justify-content: center;
     gap: 35px 35px;
     flex-wrap: wrap;
     padding: 44px 51px;
+}
+
+.dashboard-content.noUI {
+    max-width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 80px;
+  
 }
 
 .dashboard .user-info {
@@ -55,7 +73,7 @@
     padding-left: 23px;
     margin-top: 30px;
     margin-left: min(30px);
-    
+
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.02);
@@ -66,13 +84,75 @@
 }
 
 .user-info p {
-    font-size: 14px;    
+    font-size: 14px;
     line-height: 20px;
-    
+
     font-family: Poppins;
+}
+
+.user-info a {
+    text-decoration: none;
+    color:#000;
 }
 
 .user-info .user-name {
     font-size: 22px;
     font-weight: 500;
+}
+
+@media (max-width: 700px) {
+    .dashboard {        
+        padding-top: 0px;
+    }
+    .dashboard.dashboard.noUI {        
+        padding-top: 0px;
+    }
+    .user-info {
+        display: none;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 700px) {
+    .dashboard-content {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        padding: 44px 24px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .user-info {
+        display: none;
+    }
+}
+
+@media (min-width: 376px) {
+    .card-link-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .user-info {
+        display: none;
+    }
+
+    .dashboard-content {
+        max-width: 360px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 26px 26px;
+        padding: 44px 0
+    }
+
+    .dashboard-main .dashboard-title {
+        font-size: 18px;
+    }
+
+    .dashboard-main .dashboard-description {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
 }

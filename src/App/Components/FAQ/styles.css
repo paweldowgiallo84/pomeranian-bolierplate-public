@@ -3,12 +3,9 @@
     src: url(./font/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf);
 }
 
-
-
-
-.faq-main-container {
-    /* background: #E5E5E5; */
-}
+/* .faq-main-container {
+   
+} */
 
 .faq-title {
     font-family: 'made tommy';
@@ -28,10 +25,53 @@
     margin-bottom: 18px;
 
     width: 780px;
-    height: 266px;
+    height: fit-content;
 
-    background: #FFFFFF;
+    background: #ffffff;
     border-left: 5px solid #C8CBD1;
     box-shadow: 1px 1px 10px;
-    border-radius: 8px;
+    border-radius: 8px;    
+}
+
+.faq-answer {
+    text-align: justify;
+}
+
+.faq__button {
+    background: none;
+    border: 0;
+}
+
+.faq__togglearrow {
+    transform: rotate(-90deg);
+    transition: 0.1s linear;
+}
+
+.faq__togglearrow--rotate {
+    transform: rotate(0deg);
+    transition: 0.1s linear;
+}
+
+@media (max-width: 1030px) {
+    .faq-question-container {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 560px) {
+    .faq-question-container {
+        width: 65vw;
+    }
+}
+
+@media (max-width: 559px) and (min-width: 361px) {
+    .faq-question-container {
+        width: 60vw;
+    }
+}
+
+@media (max-width: 360px) {
+    .faq-question-container {
+        width: 80vw;
+    }
 }
