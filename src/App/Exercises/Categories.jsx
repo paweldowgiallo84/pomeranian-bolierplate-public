@@ -9,7 +9,7 @@ export const Categories = () => {
       <div className="exercises-categories">
         <h2>What I was learning</h2>
 
-        <div className='excercises-list'>
+        <div className="excercises-list">
           <NavLink to="html-css">HTML & CSS - exercise list</NavLink>
           <NavLink to="js">JS - exercise list</NavLink>
           <NavLink to="react">React - exercise list</NavLink>

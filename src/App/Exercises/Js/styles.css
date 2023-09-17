@@ -1,0 +1,18 @@
+.exercise__link--style {
+    list-style: none;
+}
+
+.exercise__link {
+    font-size: large;
+    font-weight: 500;
+    
+    text-align: center;    
+    padding: 8px 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.exercise__link .link {
+    text-decoration: none;
+    color: #000;
+}

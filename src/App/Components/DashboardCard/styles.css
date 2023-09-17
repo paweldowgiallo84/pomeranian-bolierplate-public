@@ -78,13 +78,13 @@
     filter: saturate(100%);
 }
 
-@media (min-width: 361px) {
+@media (min-width: 376px) {
     .dashboard-card-mobile {
         display: none;
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
     .dashboard-card {
         display: none;
     }

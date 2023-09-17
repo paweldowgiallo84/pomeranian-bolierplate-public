@@ -123,7 +123,7 @@ header .logo {
   }
 }
 
-@media (min-width:361px) {
+@media (min-width:376px) {
 header {
   box-shadow: 0px 1px 9px 0px var(--color-grey);
 }
@@ -136,7 +136,7 @@ header {
   }
 }
 
-@media (max-width:360px) {
+@media (max-width:375px) {
 .profile__imege-avatar {
   display: none;
 }

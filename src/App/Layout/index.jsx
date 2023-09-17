@@ -8,7 +8,6 @@ import { ErrorBoundary } from './ErrorBoundary';
 import './styles/layout.css';
 import { AppAside } from './AppAside';
 import Cookies from '../Components/Cookies/Cookies';
-import { MobileUpheader } from './MobileUpheader';
 
 export const Layout = ({ userInfoIsVisible, setUserInfoIsVisible }) => {
   const [withSidebar, setWithSidebar] = useState(true);
@@ -17,7 +16,7 @@ export const Layout = ({ userInfoIsVisible, setUserInfoIsVisible }) => {
 
   useEffect(() => {
     function hideSidebar() {
-      if (window.innerWidth <= 360) setWithSidebar(false);
+      if (window.innerWidth <= 375) setWithSidebar(false);
       else setWithSidebar(true);
     }
     hideSidebar();
@@ -37,8 +36,7 @@ export const Layout = ({ userInfoIsVisible, setUserInfoIsVisible }) => {
   return (
     <ErrorBoundary>
       <Cookies />
-      <div className="layout">
-        <MobileUpheader />
+      <div className="layout">        
         <AppHeader
           setSidebarVisible={setSidebarVisible}
           userInfoIsVisible={userInfoIsVisible}

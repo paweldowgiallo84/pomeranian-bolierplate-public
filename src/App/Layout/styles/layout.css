@@ -35,27 +35,33 @@ main {
   }
 }
 
-@media (max-width: 360px) {
+@media (min-width: 376px) and (max-width: 790px) {
+  .layout {
+    grid-template-columns: 5.5rem 1fr;
+    grid-template-rows:  5rem 4fr 10rem;    
+  }
+}
+
+@media (max-width: 375px) {
   .layout {
     grid-template-columns: 10rem 1fr;
-    grid-template-rows: 6rem 5rem 4fr 10rem;
-    grid-template-areas:
-      'upheader upheader'
+    grid-template-rows:  5rem 4fr 10rem;
+    grid-template-areas:      
       'header header'
       'sidebar main'
       'footer footer';
   }
 
   main {
-    grid-area: 3/1/4/3;
+    grid-area: 2/1/3/3;
     background-color: var(--color-grey-mobile);
-    height: calc(100vh - 5rem - 15rem);
+    height: calc(100vh - 5rem - 10rem);
   }
 
   aside {
     height: fit-content;
     z-index: 1;
-    grid-area: 3/1/4/2;
+    grid-area: 2/1/3/2;
     background-color: var(--color-white);
     border-radius: 0 0 5px 0;
   }

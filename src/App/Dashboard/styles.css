@@ -112,7 +112,7 @@
     }
 }
 
-@media (min-width: 361px) and (max-width: 700px) {
+@media (min-width: 376px) and (max-width: 700px) {
     .dashboard-content {
         flex-wrap: nowrap;
         flex-direction: column;
@@ -126,13 +126,13 @@
     }
 }
 
-@media (min-width: 361px) {
+@media (min-width: 376px) {
     .card-link-mobile {
         display: none;
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
     .user-info {
         display: none;
     }
