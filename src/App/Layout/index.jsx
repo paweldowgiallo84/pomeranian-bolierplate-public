@@ -36,7 +36,7 @@ export const Layout = ({ userInfoIsVisible, setUserInfoIsVisible }) => {
   return (
     <ErrorBoundary>
       <Cookies />
-      <div className="layout">        
+      <div className="layout">
         <AppHeader
           setSidebarVisible={setSidebarVisible}
           userInfoIsVisible={userInfoIsVisible}

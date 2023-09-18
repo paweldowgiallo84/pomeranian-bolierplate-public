@@ -5,7 +5,7 @@ import CookiesModal from './CookiesModal';
 
 const Cookies = () => {
   const setCookieState = () => {
-    localStorage.setItem('cookieState', 1);
+    localStorage.setItem('cookieState', 'agree');
   };
   const [refresh, setRefresh] = useState();
 
@@ -22,9 +22,9 @@ const Cookies = () => {
     setShowAgrreementCustomization(true);
   };
 
-  if (localStorage.getItem('cookieState') == 1) return null;
+  if (localStorage.getItem('cookieState') === 'agree') return null;
   return (
-    <div className="cookies-agreement">
+    <div className="cookie__agreement">
       <div className="cookie-agreement-text">
         <img className="cookie-image" src={cookie} alt="cookie agreement" />
         <p>
@@ -39,12 +39,17 @@ const Cookies = () => {
       </div>
 
       <div className="cookie-btn">
-        <button className="agree" onClick={handleAgreement}>
-          w porządku
-        </button>
-        <button className="customize" onClick={showHandleAgreement}>
-          Dopasuj zgody
-        </button>
+        {!showAgrreementCustomization ? (
+          <div className="cookie-btn">
+            <button className="agree" onClick={handleAgreement}>
+              w porządku
+            </button>
+            <button className="customize" onClick={showHandleAgreement}>
+              Dopasuj zgody
+            </button>
+          </div>
+        ) : null}
+
         <CookiesModal
           open={showAgrreementCustomization}
           onClose={() => setShowAgrreementCustomization(false)}

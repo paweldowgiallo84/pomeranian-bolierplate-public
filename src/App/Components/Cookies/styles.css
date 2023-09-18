@@ -3,31 +3,33 @@
     --primary-cookies-btn: #FE3756;
 }
 
-.cookies-agreement {
+.cookie__agreement {
     display: flex;
     flex-direction: row;
     align-items: center;
     position: fixed;
     z-index: 4;
     width: 100vw;
-    padding: 80px 120px;
+    padding: 60px 80px;
     bottom: 0px;
     background-color: var(--secondary-cookies-agreement);
     color: white;
+    text-align: justify;
 }
 
-.cookies-agreement .cookie-image {
+.cookie__agreement .cookie-image {
     float: left;
     padding: 20px;
 }
 
-.cookies-agreement .cookie-btn {
+.cookie__agreement .cookie-btn {
     display: flex;
+    flex-direction: column;
     margin-left: 56px;
     gap: 16px;
 }
 
-.cookies-agreement .cookie-btn button {
+.cookie__agreement .cookie-btn button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +48,7 @@
     white-space: nowrap;
 }
 
-.cookies-agreement .cookie-btn button:active {
+.cookie__agreement .cookie-btn button:active {
     box-shadow: 0 5px #2a2a2a;
     transform: translateY(2px);
   }
@@ -58,4 +60,52 @@ button.agree {
 
 button.customize {
     color: var(--primary-cookies-btn);
+}
+@media (min-width: 761px) and (max-width: 1280px) {
+    .cookie__agreement {
+        padding: 40px 60px;
+    }
+}
+
+@media (max-width: 760px) {
+    .cookie__agreement .cookie-btn {
+        flex-direction: row;
+        margin: 0 auto;
+    }
+
+    .cookie__agreement .cookie-btn button {
+        padding: 15px 20px;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 760px) {
+    .cookie__agreement {
+        flex-direction: column;
+        padding: 30px 40px;
+    }
+
+    .cookie__agreement .cookie-btn {
+        margin-top: 10px;
+        gap: 10vw;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 430px) {
+    .cookie__agreement .cookie-btn {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 375px) {
+    .cookie__agreement {
+        width: 100vw;
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 4;
+        bottom: 0px;
+        background-color: var(--secondary-cookies-agreement);
+        color: white;
+    }
 }
