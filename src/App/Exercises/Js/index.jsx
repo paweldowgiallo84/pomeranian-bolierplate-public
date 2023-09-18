@@ -17,7 +17,7 @@ export function JsExercises() {
 
   return (
     <div>
-      <p>JS - lista ćwiczeń</p>
+      <p>JS - exercises list</p>
       <GoBackLink label="Zamknij" />
 
       <hr />
