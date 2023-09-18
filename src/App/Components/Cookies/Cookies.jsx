@@ -5,7 +5,7 @@ import CookiesModal from './CookiesModal';
 
 const Cookies = () => {
   const setCookieState = () => {
-    localStorage.setItem('cookieState', 1);
+    localStorage.setItem('cookieState', 'agree');
   };
   const [refresh, setRefresh] = useState();
 
@@ -22,7 +22,7 @@ const Cookies = () => {
     setShowAgrreementCustomization(true);
   };
 
-  if (localStorage.getItem('cookieState') == 1) return null;
+  if (localStorage.getItem('cookieState') === 'agree') return null;
   return (
     <div className="cookies-agreement">
       <div className="cookie-agreement-text">

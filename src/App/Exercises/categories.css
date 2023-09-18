@@ -1,10 +1,48 @@
 .exercises-categories > * {
-  /* display: list-item; */
   display: flex;
- }
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
 
- .excercises-list {
-  flex-direction: column;
+.excercises-list {
+  font-size: 16px;
+  font-weight: 600;
+  flex-direction: row;
   row-gap: 0.5rem;
-  
- }
+}
+
+.excercises-list a {
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid rgb(107, 107, 107);
+  border-radius: 8px;
+  padding: 20px 10px;
+  margin: 10px;
+  filter: saturate(0%);
+}
+
+.excercises-list a:hover,
+a:focus {
+  filter: saturate(100%);
+  transition: 0.5s;     
+}
+
+.html__css__icon {
+  position: relative;
+  left: 10px;
+}
+
+.html__css__icon .css__icon {
+  position: relative;
+  left: -25px;
+}
+
+.excercises-list img {
+  height: 64px;
+}

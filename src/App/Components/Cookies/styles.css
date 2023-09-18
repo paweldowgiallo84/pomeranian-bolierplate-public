@@ -10,7 +10,7 @@
     position: fixed;
     z-index: 4;
     width: 100vw;
-    padding: 80px 120px;
+    padding: 60px 80px;
     bottom: 0px;
     background-color: var(--secondary-cookies-agreement);
     color: white;
@@ -23,6 +23,7 @@
 
 .cookies-agreement .cookie-btn {
     display: flex;
+    flex-direction: column;
     margin-left: 56px;
     gap: 16px;
 }
@@ -59,3 +60,46 @@ button.agree {
 button.customize {
     color: var(--primary-cookies-btn);
 }
+
+@media (min-width: 761px) and (max-width: 1280px) {
+    .cookies-agreement {
+        padding: 40px 60px;
+    }
+}
+@media (max-width: 760px) {
+    .cookies-agreement .cookie-btn {
+        flex-direction: row;
+        margin: 0 auto;
+    }
+    .cookies-agreement .cookie-btn button {
+        padding: 15px 20px;
+    }
+}
+@media (min-width: 376px) and (max-width: 760px) {
+    .cookies-agreement {
+        flex-direction: column;
+        padding: 30px 40px;
+    }
+    .cookies-agreement .cookie-btn {
+        margin-top: 10px;
+        gap: 10vw;
+    }
+}
+@media (min-width: 376px) and (max-width: 430px) {
+    .cookies-agreement .cookie-btn {
+        gap: 16px;
+    }
+}
+@media (max-width: 375px) {
+    .cookies-agreement {
+        width: 100vw;
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 4;
+        bottom: 0px;
+        background-color: var(--secondary-cookies-agreement);
+        color: white;
+    }
+} 
