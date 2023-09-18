@@ -1,25 +1,18 @@
 import { Link } from 'react-router-dom';
-
 import { blockRouterMetaData } from './view-router-data';
 
-export const ExerciseLinks = () => {
-  function getClassName(path) {
-    if (window.location.path !== path) {
-      return '';
-    }
+import '../exercises.css';
 
-    return 'active';
-  }
+export const ExerciseLinks = () => {
   return (
     <ul>
       {blockRouterMetaData.map((blockMetaData) => (
-        <li key={blockMetaData.path}>
-          <Link
-            to={blockMetaData.path}
-            className={getClassName(blockMetaData.path)}
-          >
-            {blockMetaData.linkLabel}
-          </Link>
+        <li className="exercise__link--style" key={blockMetaData.path}>
+          <p className="exercise__link">
+            <Link to={blockMetaData.path} className="link">
+             Block {blockMetaData.blockNo} - {blockMetaData.linkLabel}
+            </Link>
+          </p>
         </li>
       ))}
     </ul>

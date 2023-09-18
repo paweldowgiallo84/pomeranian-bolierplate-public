@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { blockRouterMetaData } from './view-router-data';
-import './styles.css';
+import '../exercises.css';
 
 export const ExerciseLinks = () => {
   return (
