@@ -61,6 +61,7 @@ button.agree {
 button.customize {
     color: var(--primary-cookies-btn);
 }
+/*
 @media (min-width: 761px) and (max-width: 1280px) {
     .cookie__agreement {
         padding: 40px 60px;
@@ -108,4 +109,4 @@ button.customize {
         background-color: var(--secondary-cookies-agreement);
         color: white;
     }
-}
+} */

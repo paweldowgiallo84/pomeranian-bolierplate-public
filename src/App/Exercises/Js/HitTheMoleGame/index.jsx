@@ -30,6 +30,7 @@ export function HitTheMoleGame() {
           <div className="hitTheMole__game-content">
             <HitTheMole />
             <div className="close__btn">
+              {showFullscreen ? 'full screen' : 'not full screen'}
               <button
                 className="btn hitTheMole__btn"
                 onClick={closeFullscreenComponent}
