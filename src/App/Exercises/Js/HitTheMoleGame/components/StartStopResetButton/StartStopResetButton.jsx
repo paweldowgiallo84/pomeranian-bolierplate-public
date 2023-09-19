@@ -9,10 +9,10 @@ const StartStopResetButton = ({
   endGame,
 }) => {
   return (
-    <div className="wackTheMoleMain">
+    <div className="wackTheMoleMain wtm__main__startstop">
       <div className="start__stop__button">
         <div className="description">
-          <p>PRZYCISKI STERUJĄCE:</p>
+          <p>PRZYCISKI STERUJĄCY:</p>
         </div>
         <div className="btns">
           {endGame ? (

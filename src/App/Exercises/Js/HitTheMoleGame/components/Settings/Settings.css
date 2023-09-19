@@ -1,3 +1,4 @@
 .wackTheMoleMain .btn--disabled {
+    width: 140px;
     background-color: gray;
 }

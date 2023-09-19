@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TitleAndDescription from '../MemoGame/components/TitleAndDescription/TitleAndDescription';
+import { TitleAndDescription } from './components/TitleAndDescription/TitleAndDescription';
 import { HitTheMole } from './components/HitTheMole';
 
 import './styles.css';
@@ -20,7 +20,10 @@ export function HitTheMoleGame() {
       <div>{!showFullscreen && <TitleAndDescription />}</div>
       <div>
         {!showFullscreen && (
-          <button className="btn memo__btn" onClick={openFullscreenComponent}>
+          <button
+            className="btn hitTheMole__btn--open"
+            onClick={openFullscreenComponent}
+          >
             URUCHOM GRE
           </button>
         )}

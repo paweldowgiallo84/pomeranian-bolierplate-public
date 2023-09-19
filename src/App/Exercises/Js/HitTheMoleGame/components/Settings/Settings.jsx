@@ -20,7 +20,7 @@ export const GameSettings = ({
   ];
 
   return (
-    <div className="wackTheMoleMain">
+    <div className="wackTheMoleMain wtm__main__settings">
       <div className="wtm_optins">
         <div className="wtm_option_settings">
           <div className="description">

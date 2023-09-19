@@ -18,3 +18,21 @@ align-self: flex-start;
     align-items: center;    
     margin-left: 41px;
 }
+
+@media (max-width: 375px) {
+    .start__stop__button .description {
+        width: 200px;
+        margin-top: 10px;
+    }
+    .start__stop__button {
+        display: flex;
+        flex-direction: column;                  
+    }
+    .start__stop__button .btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+}
