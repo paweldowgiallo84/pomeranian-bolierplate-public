@@ -16,9 +16,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(5px);
 }
 
 .memo__game-content {
+    width: 880px;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -26,4 +28,20 @@
    border: 4px solid rgba(0, 0, 0, 0.4);
    border-radius: 20px;
    padding: 20px;
+}
+
+@media (max-width: 375px) {
+    .memo__game-content {
+        width: 370px;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: -70px;        
+        padding: 10px;
+     }
+     .memo__game-content .memo__btn {
+        width: 200px;        
+    }
 }

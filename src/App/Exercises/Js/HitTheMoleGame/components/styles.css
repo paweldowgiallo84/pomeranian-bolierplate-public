@@ -3,7 +3,6 @@
     font-size: 18px;
     line-height: 31px;
     letter-spacing: 0em;
-    margin-left: 31px;
 }
 
 .board {
@@ -140,8 +139,9 @@
     }
 
     .game--start {
-        position: relative;              
-        top: 40px;        
+        position: relative;
+        left: 20px;
+        top: 40px;
     }
 
     .wtm_option_settings .description {

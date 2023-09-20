@@ -1,4 +1,12 @@
-.memo_game_main .title {
+.memo_game_title {
+    font-family: Poppins;
+    font-size: 18px;
+    line-height: 31px;
+    letter-spacing: 0em;
+    margin-left: 31px;
+}
+
+.memo_game_title .title {
     display: flex;
     font-weight: bold;
     font-weight: 700;

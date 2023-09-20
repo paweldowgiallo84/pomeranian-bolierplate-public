@@ -8,11 +8,11 @@ import { ErrorBoundary } from './ErrorBoundary';
 import './styles/layout.css';
 import { AppAside } from './AppAside';
 import Cookies from '../Components/Cookies/Cookies';
+import { HitTheMoleGame } from '../Exercises/Js/HitTheMoleGame';
 
 export const Layout = ({ userInfoIsVisible, setUserInfoIsVisible }) => {
   const [withSidebar, setWithSidebar] = useState(true);
   const [isSidebarVisible, setSidebarVisible] = useState(false);
-  // const [userInfoIsVisible, setUserInfoIsVisible] = useState(false);
 
   useEffect(() => {
     function hideSidebar() {
@@ -36,7 +36,7 @@ export const Layout = ({ userInfoIsVisible, setUserInfoIsVisible }) => {
   return (
     <ErrorBoundary>
       <Cookies />
-      <div className="layout">        
+      <div className="layout">
         <AppHeader
           setSidebarVisible={setSidebarVisible}
           userInfoIsVisible={userInfoIsVisible}

@@ -10,7 +10,7 @@ import './Memo.css';
 const CHARACTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const DEFAULT_BOARD_SIZE = 16;
 
-export const Memo = () => {
+export const Memo = ({ closeFullscreenComponent }) => {
   const [boardSize, setBoardSize] = useState(DEFAULT_BOARD_SIZE);
   const [isGameStarted, setIsGameStarted] = useState(false);
   const [seconds, setSeconds] = useState(0);
@@ -124,41 +124,36 @@ export const Memo = () => {
 
   return (
     <>
-      <div>
-        <div>
-          {guessedCount === 0 ? (
-            <Result
-              finishGameTime={finishGameTime}
-              finishSteps={finishSteps}
-              boardSize={boardSize}
-            />
-          ) : null}
-        </div>
-        <div>
-          {!isGameStarted || gameStop ? (
-            <Settings boardSize={boardSize} setBoardSize={setBoardSize} />
-          ) : (
-            <GameInProgress seconds={seconds} steps={steps} />
-          )}
-        </div>
-        <div>
-          <StartButton
-            startStopGame={startStopGame}
-            isGameStarted={isGameStarted}
-            gameStop={gameStop}
-          />
-        </div>
-        <div>
-          {isGameStarted && guessedCount !== 0 ? (
-            <Gameboard
-              inspectChar={inspectChar}
-              shuffleChars={shuffleChars}
-              classOfElement={classOfElement}
-              cardIsSelected={cardIsSelected}
-            />
-          ) : null}
-        </div>
-      </div>
+      {guessedCount === 0 ? (
+        <Result
+          finishGameTime={finishGameTime}
+          finishSteps={finishSteps}
+          boardSize={boardSize}
+        />
+      ) : null}
+      {!isGameStarted || gameStop ? (
+        <Settings boardSize={boardSize} setBoardSize={setBoardSize} />
+      ) : (
+        <GameInProgress seconds={seconds} steps={steps} />
+      )}
+      <StartButton
+        startStopGame={startStopGame}
+        isGameStarted={isGameStarted}
+        gameStop={gameStop}
+      />
+      {isGameStarted && guessedCount !== 0 ? (
+        <Gameboard
+          inspectChar={inspectChar}
+          shuffleChars={shuffleChars}
+          classOfElement={classOfElement}
+          cardIsSelected={cardIsSelected}
+        />
+      ) : null}
+      {isGameStarted ? null : (
+        <button className="btn memo__btn" onClick={closeFullscreenComponent}>
+          ZAMKNIJ GRE
+        </button>
+      )}
     </>
   );
 };

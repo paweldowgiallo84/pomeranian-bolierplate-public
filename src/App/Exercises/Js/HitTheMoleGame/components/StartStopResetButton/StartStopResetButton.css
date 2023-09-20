@@ -1,37 +1,45 @@
-.wackTheMoleMain {
-align-self: flex-start;
+.start__stop__button {
+    align-self: flex-start;
 }
 
 .start__stop__button {
     display: flex;
     align-items: center;
-    margin-top: 11px;
+    margin-top: 11px;    
 }
 
 .start__stop__button .description {
     width: 200px;
 }
 
-.start__stop__button .btns {
+.start__stop__button .btn {
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     margin-left: 41px;
+    background-color: #23213D;
 }
 
 @media (max-width: 375px) {
+    .start__stop__button {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
     .start__stop__button .description {
         width: 200px;
         margin-top: 10px;
     }
-    .start__stop__button {
-        display: flex;
-        flex-direction: column;                  
+
+    .description {
+        text-align: center;
     }
-    .start__stop__button .btns {
+
+    .start__stop__button .btn {
         display: flex;
         justify-content: center;
-        align-items: center;    
+        align-items: center;
         margin-left: 0px;
         margin-top: 10px;
     }

@@ -29,15 +29,10 @@ export const MemoGame = () => {
         {showFullscreen && (
           <div className="memo__game-fullscreen">
             <div className="memo__game-content">
-              <Memo />
-              <div className="close__btn">
-                <button
-                  className="btn memo__btn"
-                  onClick={closeFullscreenComponent}
-                >
-                  ZAMKNIJ GRE
-                </button>
-              </div>
+              <Memo
+                showFullscreen={showFullscreen}
+                closeFullscreenComponent={closeFullscreenComponent}
+              />
             </div>
           </div>
         )}

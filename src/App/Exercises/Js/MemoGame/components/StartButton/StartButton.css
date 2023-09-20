@@ -1,0 +1,21 @@
+.memo__start__stop {   
+    width: 767px;   
+    display: flex;      
+    flex-direction: row;    
+    align-items: center;
+}
+
+.memo__start__stop .description {
+    width: 188px;
+    margin-right: 42px;
+}
+
+@media (max-width: 375px) {
+    .memo__start__stop {   
+        justify-content: center;         
+    }
+
+    .memo__start__stop .description {
+        display: none;
+    }
+}
