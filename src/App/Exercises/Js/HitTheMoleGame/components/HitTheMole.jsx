@@ -74,7 +74,7 @@ export function HitTheMole() {
     if (isCountingDown) {
       intervalId = setInterval(() => {
         showRandomMole();
-      }, MOLE_SPEED / 1);
+      }, MOLE_SPEED / 2);
     }
 
     return () => clearInterval(intervalId);

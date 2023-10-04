@@ -1,13 +1,13 @@
+import './GameResult.css';
+
 export const GameResult = ({ scoreCount, gameTime }) => {
   const minutesOfGame = Math.floor(gameTime / 1000 / 60);
   const secondsOfGame = (gameTime / 1000) % 60;
 
   return (
-    <div className="wackTheMoleMain">
-      <h2>
-        Twój najepsy wynik to {localStorage.getItem('highscore')} punktów.
-      </h2>
-      <h2>
+    <div className="wtm__result">
+      <p>Twój najepsy wynik to {localStorage.getItem('highscore')} punktów.</p>
+      <p>
         Gratulacje! Twój wynik to: {scoreCount}
         {scoreCount === 1
           ? ' złapany '
@@ -22,7 +22,7 @@ export const GameResult = ({ scoreCount, gameTime }) => {
         w czasie
         {minutesOfGame.toString().padStart(2, 0)}:
         {secondsOfGame.toString().padStart(2, 0)}
-      </h2>
+      </p>
     </div>
   );
 };

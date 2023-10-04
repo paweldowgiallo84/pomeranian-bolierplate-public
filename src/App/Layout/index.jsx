@@ -12,7 +12,6 @@ import Cookies from '../Components/Cookies/Cookies';
 export const Layout = ({ userInfoIsVisible, setUserInfoIsVisible }) => {
   const [withSidebar, setWithSidebar] = useState(true);
   const [isSidebarVisible, setSidebarVisible] = useState(false);
-  // const [userInfoIsVisible, setUserInfoIsVisible] = useState(false);
 
   useEffect(() => {
     function hideSidebar() {
@@ -36,7 +35,7 @@ export const Layout = ({ userInfoIsVisible, setUserInfoIsVisible }) => {
   return (
     <ErrorBoundary>
       <Cookies />
-      <div className="layout">        
+      <div className="layout">
         <AppHeader
           setSidebarVisible={setSidebarVisible}
           userInfoIsVisible={userInfoIsVisible}

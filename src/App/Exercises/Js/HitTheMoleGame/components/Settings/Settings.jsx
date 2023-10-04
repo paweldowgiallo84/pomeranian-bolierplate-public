@@ -20,50 +20,48 @@ export const GameSettings = ({
   ];
 
   return (
-    <div className="wackTheMoleMain">
-      <div className="wtm_optins">
-        <div className="wtm_option_settings">
-          <div className="description">
-            <p>CZAS GRY:</p>
-            <p>LICZBA KRETÓW:</p>
+    <div className="wtm_optins">
+      <div className="wtm_option_settings">
+        <div className="description">
+          <p>CZAS GRY:</p>
+          <p>LICZBA KRETÓW:</p>
+        </div>
+
+        <div className="wtm_options_btns">
+          <div className="btns">
+            {gameTimeSelector.map(({ label, timeValue }) => (
+              <button
+                disabled={endGame}
+                className={
+                  endGame
+                    ? 'btn--disabled'
+                    : gameTime === timeValue
+                    ? 'activ_btn'
+                    : 'btn'
+                }
+                onClick={() => setGameTime(timeValue)}
+              >
+                {label}
+              </button>
+            ))}
           </div>
 
-          <div className="wtm_options_btns">
-            <div className="btns">
-              {gameTimeSelector.map(({ label, timeValue }) => (
-                <button
-                  disabled={endGame}
-                  className={
-                    endGame
-                      ? 'btn--disabled'
-                      : gameTime === timeValue
-                      ? 'activ_btn'
-                      : 'btn'
-                  }
-                  onClick={() => setGameTime(timeValue)}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-
-            <div className="btns">
-              {molesCountOption.map(({ label }) => (
-                <button
-                  disabled={endGame}
-                  className={
-                    endGame
-                      ? 'btn--disabled'
-                      : howManyMoles === Number(label[0])
-                      ? 'activ_btn'
-                      : 'btn'
-                  }
-                  onClick={() => setHowManyMoles(Number(label[0]))}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
+          <div className="btns">
+            {molesCountOption.map(({ label }) => (
+              <button
+                disabled={endGame}
+                className={
+                  endGame
+                    ? 'btn--disabled'
+                    : howManyMoles === Number(label[0])
+                    ? 'activ_btn'
+                    : 'btn'
+                }
+                onClick={() => setHowManyMoles(Number(label[0]))}
+              >
+                {label}
+              </button>
+            ))}
           </div>
         </div>
       </div>

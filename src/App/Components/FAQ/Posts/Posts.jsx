@@ -40,11 +40,11 @@ export const Posts = ({ faqIsOpen, showFAQ, classOfAnswer, setFaqIsOpen }) => {
             <img
               className={
                 faqIsOpen === faq.id
-                  ? 'faq__togglearrow'
-                  : 'faq__togglearrow--rotate'
+                  ? 'faq__togglearrow--rotate'
+                  : 'faq__togglearrow'
               }
               src={toggleArrow}
-              alt=""
+              alt="toggle arrow"
             />
           </button>
           <span className="faq-question">{faq.question}</span>

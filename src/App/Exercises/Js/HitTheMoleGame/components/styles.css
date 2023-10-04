@@ -3,7 +3,6 @@
     font-size: 18px;
     line-height: 31px;
     letter-spacing: 0em;
-    margin-left: 31px;
 }
 
 .board {
@@ -85,8 +84,7 @@
 }
 
 .wackTheMoleMain .btn {
-    width: 163px;
-    height: 56px;
+    width: 153px;
     margin: 0px;
     background-color: #23213D;
 }
@@ -122,4 +120,86 @@
 
 .moleHole:active {
     border: 1px solis #979797;
+}
+
+@media (max-width: 375px) {
+
+    .wtm__main__settings,
+    .wtm__main__startstop {
+        margin: 0 auto;
+    }
+
+    .wtm_optins .wtm_option_settings {
+        position: relative;
+        top: -40px;
+        display: flex;
+        flex-direction: column;
+        height: 165px;
+        margin-top: 10px;
+    }
+
+    .game--start {
+        position: relative;
+        left: 20px;
+        top: 40px;
+    }
+
+    .wtm_option_settings .description {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 300px;
+        padding-left: 20px;
+    }
+
+    .wtm_option_settings .wtm__game--start {
+        position: relative;
+        left: -40px;
+        padding-left: -10px;
+    }
+
+    .wtm_options_btns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 300px;
+        margin-left: 0px;
+        margin: 20px 0;
+        gap: 30px;
+    }
+
+    .btns .scoreAndTime {
+        position: relative;
+        left: -20px;
+        width: 140px;
+    }
+
+    .wtm_options_btns .btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .btns button {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0em;
+    }
+
+    .wackTheMoleMain .btn {
+        width: 140px;
+        margin: 0px;
+        background-color: #23213D;
+    }
+
+    .wackTheMoleMain .activ_btn {
+        background-color: #FE3756;
+        width: 140px;
+    }
+
+    .wackTheMoleMain .btn:hover {
+        opacity: 0.9;
+        transition: 0.3s linear;
+    }
 }

@@ -12,7 +12,7 @@ import { BlogIcon } from '../Components/Icons/BlogIcon';
 import { CodeWarsIcon } from '../Components/Icons/CodeWarsIcon';
 import { CssBattleIcon } from '../Components/Icons/CssBattleIcon';
 import { TechStackIcon } from '../Components/Icons/TechStackIcon';
-
+import { GameIcon } from '../Components/Icons/GameIcon';
 
 export function AppAside() {
   return (
@@ -47,6 +47,12 @@ export function AppAside() {
             <NavLink className="aside-row" to="exercises">
               <EditIcon />
               <div className="mobile__hiden-only">Ćwiczenia</div>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="aside-row" to="games">
+              <GameIcon />
+              <div className="mobile__hiden-only">Games</div>
             </NavLink>
           </li>
           <li>

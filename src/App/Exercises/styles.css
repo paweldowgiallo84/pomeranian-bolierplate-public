@@ -8,6 +8,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
+  margin-right: 20px;
 }
 
 .exexercises-categories {
@@ -17,4 +18,8 @@
 .exercises-categories a.active {
   background-color: var(--color-primary-blue);
   color: var(--color-white);
+}
+
+@media (max-width: 375px) {
+
 }

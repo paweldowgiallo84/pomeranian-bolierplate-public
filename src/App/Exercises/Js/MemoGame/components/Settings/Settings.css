@@ -1,8 +1,45 @@
+.memo_option_setting {    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 40px;    
+    
+}
 .memo_btn {
     background-color: #23213D;
     border: 0;
 }
 
-.memo_game_main .activ_memo_btn {
+.memo_option .description {
+    width: 188px;
+    margin-right: 42px;    
+}
+
+.memo_option .activ_memo_btn {
     background-color: #FE3756;
+}
+
+@media (max-width: 375px) {
+    .memo_option_setting {
+        flex-direction: column;        
+    }
+    .memo_option .description { 
+        font-weight: 500;
+        margin: 0;        
+        padding-bottom: 15px;  
+    }
+    .memo_option {
+        padding-top: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .memo_option .memo_btn, .memo_option .activ_memo_btn  {
+        width: 100px;        
+    }
+
+    .btns > button {
+        font-size: 12px;
+        font-weight: 600;
+    }
 }

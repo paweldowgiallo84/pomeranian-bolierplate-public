@@ -1,3 +1,19 @@
-.wackTheMoleMain .btn--disabled {
+.wtm_optins .btn {
+    background-color: #23213D;
+}
+
+.wtm_optins .btn--disabled {
+    width: 140px;
     background-color: gray;
+}
+
+.wtm_optins .activ_btn {
+    background-color: #FE3756;
+}
+
+@media (max-width: 375px) {
+    .wtm_optins .btn,
+    .wtm_optins .activ_btn {
+        width: 140px;
+    }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Settings.css'
+import './Settings.css';
 
 const Settings = ({ boardSize, setBoardSize }) => {
   const gameElementSelector = [
@@ -9,24 +9,23 @@ const Settings = ({ boardSize, setBoardSize }) => {
   ];
 
   return (
-    <div>
-      <div className="memo_game_main">
-        <div className="memo_option">
-          <div className="description">
-            <span>LICZBA ELEMENTÓW</span>
-          </div>
-          <div className="btns">
-            {gameElementSelector.map(({ label, sizeValue, id }) => (
-              <button key={id}
-                className={
-                  boardSize === sizeValue ? 'activ_memo_btn' : 'memo_btn'
-                }
-                onClick={() => setBoardSize(sizeValue)}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
+    <div className="memo_option">
+      <div className="memo_option_setting">
+        <div className="description">
+          <span>LICZBA ELEMENTÓW</span>
+        </div>
+        <div className="btns">
+          {gameElementSelector.map(({ label, sizeValue, id }) => (
+            <button
+              key={id}
+              className={
+                boardSize === sizeValue ? 'activ_memo_btn' : 'memo_btn'
+              }
+              onClick={() => setBoardSize(sizeValue)}
+            >
+              {label}
+            </button>
+          ))}
         </div>
       </div>
     </div>

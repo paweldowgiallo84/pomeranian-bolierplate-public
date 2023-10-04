@@ -1,5 +1,4 @@
 import './styles.css';
-import React, { useState } from 'react';
 
 import cssIcon from '../../Images/tech-stack/CSS3.svg';
 import htmlIcon from '../../Images/tech-stack/HTML5.svg';
@@ -15,10 +14,10 @@ import gitIcon from '../../Images/tech-stack/Git.svg';
 import vscIcon from '../../Images/tech-stack/VSC.svg';
 import discordIcon from '../../Images/tech-stack/Discord.svg';
 import jiraIcon from '../../Images/tech-stack/Jira.svg';
-// import redmineIcon from '../../Images/tech-stack/Redmine.svg';
+import redmineIcon from '../../Images/tech-stack/Redmine.svg';
 
 export const TechStack = () => {
-  const [techstackIons, steTechstackIcons] = useState([
+  const techstackIons = [
     {
       icon: <img className="svg__normal__size" src={cssIcon} alt="CSS" />,
       techstachTitle: 'CSS',
@@ -97,20 +96,22 @@ export const TechStack = () => {
       icon: <img className="svg__normal__size" src={jiraIcon} alt="Jira" />,
       techstachTitle: 'Jira',
     },
-    // {
-    //   icon: (
-    //     <img className="svg__normal__size" src={redmineIcon} alt="Redmine" />
-    //   ),
-    //   techstachTitle: 'Redmine',
-    // },
-  ]);
+    {
+      icon: (
+        <img className="svg__normal__size" src={redmineIcon} alt="Redmine" />
+      ),
+      techstachTitle: 'Redmine',
+    },
+  ];
+
   return (
     <div className="techstack">
-      <div className='techstack--title'><h3>My Tech Stack</h3>
-      <p>Technologies I have learned and programs I use</p>
+      <div className="techstack--title">
+        <h3>My Tech Stack</h3>
+        <p>Technologies I have learned and programs I use</p>
       </div>
-      
-      <div className='techstack__icon--container'>
+
+      <div className="techstack__icon--container">
         {techstackIons.map((tech) => (
           <div key={tech.techstachTitle} className="tech__icon">
             <span className="tech__icon--icon">{tech.icon}</span>

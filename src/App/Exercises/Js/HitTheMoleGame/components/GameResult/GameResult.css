@@ -1,0 +1,21 @@
+.wtm__result p {  
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 375px) {
+    .wtm__result p {
+        position: relative;
+        left: -10px;
+        top: -20px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+}
