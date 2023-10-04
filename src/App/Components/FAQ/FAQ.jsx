@@ -1,23 +1,10 @@
 import React, { useState } from 'react';
-
-import { Route, Routes } from 'react-router-dom';
-import { NotFound } from '../NotFound/NotFound';
-
 import toggleArrow from '../../Images/toggle-arrow.svg';
-
-import './styles.css';
 import { Posts } from './Posts/Posts';
 
-export const FAQ = () => {
-  return (
-    <Routes>
-      <Route path="" element={<FAQLayout />}></Route>
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-  );
-};
+import './styles.css';
 
-function FAQLayout() {
+export const FAQ = () => {
   const [faqIsOpen, setFaqIsOpen] = useState(null);
 
   return (
@@ -35,4 +22,4 @@ function FAQLayout() {
       <Posts faqIsOpen={faqIsOpen} setFaqIsOpen={setFaqIsOpen} />
     </div>
   );
-}
+};

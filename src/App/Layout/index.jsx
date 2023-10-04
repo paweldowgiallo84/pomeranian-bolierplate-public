@@ -8,7 +8,6 @@ import { ErrorBoundary } from './ErrorBoundary';
 import './styles/layout.css';
 import { AppAside } from './AppAside';
 import Cookies from '../Components/Cookies/Cookies';
-import { HitTheMoleGame } from '../Exercises/Js/HitTheMoleGame';
 
 export const Layout = ({ userInfoIsVisible, setUserInfoIsVisible }) => {
   const [withSidebar, setWithSidebar] = useState(true);

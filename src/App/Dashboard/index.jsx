@@ -6,14 +6,11 @@ import edit from '../Images/edit.svg';
 import booksaved from '../Images/book-saved.svg';
 import faq from '../Images/messages.svg';
 import hand from '../Images/waving-hand-sign.png';
-import user from '../Images/user-image.png';
+import UserInfo from './UserInfo/UserInfo';
 import techstack from '../Images/tech-stack/techstack.svg';
 
-const email = 'dowgiallopawel@gmail.com';
-const phone = '+48-512-236-361';
-
 export const Dashboard = ({ userInfoIsVisible }) => {
-  const [availableCards, setAvailableCards] = useState([
+  const [availableCards] = useState([
     {
       sectionTitle: 'Moje CV',
       icon: <img src={personalCard} alt="business card resume" />,
@@ -77,23 +74,7 @@ export const Dashboard = ({ userInfoIsVisible }) => {
           })}
         </div>
       </div>
-      {userInfoIsVisible && (
-        <div className="user-info">
-          <img className="user-image" src={user} alt="" />
-          <h3 className="user-name">Paweł Dowgiałło</h3>
-          <p className="user-location">Gdańsk</p>
-          <div className="user-email">
-            <p>
-              <a href={`mailto:${email}`}>{`Email: ${email}`}</a>
-            </p>
-          </div>
-          <div className="user-phone-number">
-            <p>
-              <a href={`tel:${phone}`}>{`Tel: ${phone}`}</a>
-            </p>
-          </div>
-        </div>
-      )}
+      {userInfoIsVisible && <UserInfo />}
     </div>
   );
 };
