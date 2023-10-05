@@ -13,22 +13,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5em;
-  /* width: 60vw;
-  height: 40vh; */
+  gap: 2em;  
   width: 100vw;
-  height: fit-content;
+  height: 60%;  
   margin: 20%;
-  margin-top: 40vh;
+  margin-top: 10vh;
   background-color: var(--secondary-cookies-agreement);
   border-radius: 8px;
 }
 
 .cookies-customization-content {
   width: 60%;
-  font-size: 24px;
-  text-align: justify;
+  font-size: 18px;  
+  overflow: scroll;
+  padding-top: 2rem;
+}
 
+.cookies-customization-content p {
+  text-align: center;
 }
 
 .cookies-btn {
@@ -54,12 +56,12 @@
 @media (min-width: 781px) and (max-width: 1280px) {
    .modalContainer {
     width: 60vw; 
-      margin-top: 40vh;
+      margin-top: 10vh;
   }
 
   .cookies-customization-content {
     width: 90%;
-    font-size: 18px;
+    font-size: 16px;
     padding-bottom: 1em;
   }
 
@@ -88,10 +90,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5em;
-    width: 80vw;
-    height: fit-content;
-    padding: 2em 0;
+    gap: 3em;
+    width: 90vw;
+    height: 60%;
+    padding: 1em 0;
     background-color: var(--secondary-cookies-agreement);
     border-radius: 8px;
   }
@@ -104,15 +106,19 @@
   }
 
   .cookies-customization-content {
-    width: 70%;
-    font-size: 18px;
-    text-align: justify;
+    width: 90%;
+    font-size: 14px;  
   }
 }
 
 @media (max-width: 375px) {
   .modalContainer {
     width: 95vw;
+    margin: 1rem;
+  }
+  .cookies-customization-content {
+    width: 90%;
+    font-size: 12px;  
   }
 
 }
