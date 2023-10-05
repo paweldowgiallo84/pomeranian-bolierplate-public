@@ -33,6 +33,10 @@ aside li {
   align-items: center;
 }
 
+.inactive {
+  pointer-events: none;
+}
+
 aside li a {
   display: block;
   padding: 0.5rem;
