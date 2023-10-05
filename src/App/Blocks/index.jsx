@@ -10,8 +10,10 @@ export function Blocks() {
 
   return (
     <>
-      <BlockLayout />
-      {element}
+      {/* <BlockLayout />
+      {element} */}
+
+      Under Construction
     </>
   );
 }

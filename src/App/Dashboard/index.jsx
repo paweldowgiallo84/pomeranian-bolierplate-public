@@ -1,49 +1,11 @@
 import './styles.css';
-import DashboardCard from '../Components/DashboardCard/DashboardCard';
-import { useState } from 'react';
-import personalCard from '../Images/personalcard.svg';
-import edit from '../Images/edit.svg';
-import booksaved from '../Images/book-saved.svg';
-import faq from '../Images/messages.svg';
+
 import hand from '../Images/waving-hand-sign.png';
 import UserInfo from './UserInfo/UserInfo';
-import techstack from '../Images/tech-stack/techstack.svg';
+import { CategoryCards } from './CategoryCards/CategoryCards';
 
 export const Dashboard = ({ userInfoIsVisible }) => {
-  const [availableCards] = useState([
-    {
-      sectionTitle: 'Moje CV',
-      icon: <img src={personalCard} alt="business card resume" />,
-      description: 'podgląd cv wraz z doświadczeniem',
-      link: '/cv',
-    },
-    {
-      sectionTitle: ' Ćwiczenia',
-      icon: <img src={edit} alt="business card resume" />,
-      description: 'wszystkie wykonane ćwiczenia',
-      link: '/exercises',
-    },
-    {
-      sectionTitle: 'Blog',
-      icon: <img src={booksaved} alt="business card resume" />,
-      description: 'wpisy blogowe o technologii front-end',
-      link: '/blog',
-    },
-    {
-      sectionTitle: 'Tech stack',
-      icon: <img src={techstack} alt="tech stack" />,
-      description: 'stack technologiczny realizowany na kursie',
-      link: '/techstack',
-    },
-    {
-      sectionTitle: 'FAQ',
-      icon: <img src={faq} alt="business card resume" />,
-      description: 'odpowiedzi na najczęstsze pytania',
-      link: '/faq',
-    },
-  ]);
 
-  console.log('UI', userInfoIsVisible);
 
   return (
     <div className={!userInfoIsVisible ? 'dashboard noUI' : 'dashboard'}>
@@ -61,17 +23,7 @@ export const Dashboard = ({ userInfoIsVisible }) => {
             !userInfoIsVisible ? 'dashboard-content noUI' : 'dashboard-content'
           }
         >
-          {availableCards.map((card) => {
-            return (
-              <DashboardCard
-                key={card.sectionTitle}
-                sectionTitle={card.sectionTitle}
-                description={card.description}
-                link={card.link}
-                icon={card.icon}
-              />
-            );
-          })}
+          <CategoryCards />
         </div>
       </div>
       {userInfoIsVisible && <UserInfo />}
