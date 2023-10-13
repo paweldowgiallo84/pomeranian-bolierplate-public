@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import './styles.css';
 
-const VanishingString = () => {
+const IntervalAndTimeout = () => {
   const [text, setText] = useState('');
 
   const [timerRunning, setTimerRunning] = useState(false);
@@ -71,6 +71,7 @@ const VanishingString = () => {
   };
 
   const StartSquerAnimation = () => {
+    setSquerSizeDown(false);
     setSquareAnimate((current) => !current);
     setSize(initSize);
   };
@@ -99,7 +100,7 @@ const VanishingString = () => {
     }
 
     return () => clearInterval(intervalID);
-  }, [size, squareAnimate]);
+  }, [size, squareAnimate, squerSizeDown, animationTime]);
 
   return (
     <div>
@@ -148,4 +149,4 @@ const VanishingString = () => {
   );
 };
 
-export default VanishingString;
+export default IntervalAndTimeout;
