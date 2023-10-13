@@ -104,47 +104,54 @@ const IntervalAndTimeout = () => {
 
   return (
     <div>
-      <div>
+      <fieldset>
+        <legend>Vanishing Text</legend>
         <button onClick={() => showText()}>Push to render text</button>
-        <p>{text}</p>
-      </div>
+        <p className="vanishing__text">{text}</p>
+      </fieldset>
       <hr />
-      <div>
+
+      <fieldset>
+        <legend>Simple Timer</legend>
         <button onClick={() => startStopTimer()}>
           {timerRunning ? 'stop timer' : 'start timer'}
         </button>
         <button onClick={() => resetTimer()}>restart</button>
         <p>Timer: {seconds}</p>
-      </div>
+      </fieldset>
+
       <hr />
-      <div>
+      <fieldset>
+        <legend>Baner Animation</legend>
         <button onClick={() => startStopBanerAnimation()}>
           {isAnimating ? 'stop baner animation' : 'start baner animation'}
         </button>
         <p className="baner__animation">{bannerContent}</p>
-      </div>
+      </fieldset>
       <hr />
-      <div>
+      <fieldset className="squer__wrapper">
+        <legend>Squer Animation</legend>
         <label for="animationTime">set animation time</label>
         <input
           onChange={handelInputChange}
           id="animationTime"
           type="number"
           className="animationInput"
+          value={animationTime}
         />
         <p className="animation__time">Animation duration: {animationTime}</p>
         <button onClick={() => StartSquerAnimation(animationTime)}>
           {squareAnimate ? 'Stop Animation' : 'Start Animation'}
         </button>
-
         <div
+          className="squer"
           style={{
             width: `${size || initSize}px`,
             height: `${size || initSize}px`,
             backgroundColor: 'brown',
           }}
         ></div>
-      </div>
+      </fieldset>
     </div>
   );
 };

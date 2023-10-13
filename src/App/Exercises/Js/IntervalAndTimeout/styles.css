@@ -1,13 +1,29 @@
+fieldset {
+    font-size: 1rem;
+    font-weight: 500;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+}
+
+.vanishing__text {
+    height: 1rem;
+}
+
 .baner__animation {
     width: fit-content;
     border: 1px solid black;
     padding: 1rem 2rem;
 }
 
+.squer__wrapper{
+    height: 19rem;
+}
+
 .squer {
     width: 10px;
     height: 10px;
     background-color: brown;
+    margin: 1rem;
 }
 
 .animationInput {
