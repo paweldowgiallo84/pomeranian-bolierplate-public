@@ -27,6 +27,7 @@ const ApiPromises = () => {
             const pokemonsData = secondResponses.map(
               (secondResponses) => secondResponses.data
             );
+            console.log(secondResponses);
             setPokemons(pokemonsData);
             setIsLoading(false);
           })
@@ -34,7 +35,6 @@ const ApiPromises = () => {
             setError(error?.message);
             setIsLoading(false);
           });
-        ////////////////////////////////////
       })
       .catch((error) => {
         setError(error?.message);
@@ -44,20 +44,14 @@ const ApiPromises = () => {
 
   const getTypeOfPokemon = (typeOfPokemon = []) =>
     typesIcon[typeOfPokemon[0].type.name];
-
   const getPokemonHP = (pokemonHp = []) => pokemonHp[0].base_stat;
-  const getPokemonAtt = (pokemonHp = []) => pokemonHp[1].base_stat;
-  const getPokemonSpecAtt = (pokemonHp = []) => pokemonHp[3].base_stat;
-  const getPokemonDef = (pokemonHp = []) => pokemonHp[2].base_stat;
-  const getPokemonSpecDef = (pokemonHp = []) => pokemonHp[4].base_stat;
-  const getPokemonSpd = (pokemonHp = []) => pokemonHp[5].base_stat;
-
+  const getPokemonAtt = (pokemonAtt = []) => pokemonAtt[1].base_stat;
+  const getPokemonDef = (pokemonDef = []) => pokemonDef[2].base_stat;
+  const getPokemonSpecAtt = (pokemonSAtt = []) => pokemonSAtt[3].base_stat;
+  const getPokemonSpecDef = (pokemonSDef = []) => pokemonSDef[4].base_stat;
+  const getPokemonSpd = (pokemonSpd = []) => pokemonSpd[5].base_stat;
   const getTypeOfPokemonClassName = (typeOfPokemoClassName = []) =>
     typeOfPokemoClassName[0].type.name;
-
-  //   const getPokemonTileBackground =
-
-  //   console.log(getPokemons);
 
   return (
     <div className="container--promises">
@@ -69,6 +63,10 @@ const ApiPromises = () => {
         getPokemonHP={getPokemonHP}
         getTypeOfPokemonClassName={getTypeOfPokemonClassName}
         getPokemonAtt={getPokemonAtt}
+        getPokemonDef={getPokemonDef}
+        getPokemonSpecAtt={getPokemonSpecAtt}
+        getPokemonSpecDef={getPokemonSpecDef}
+        getPokemonSpd={getPokemonSpd}
       />
     </div>
   );

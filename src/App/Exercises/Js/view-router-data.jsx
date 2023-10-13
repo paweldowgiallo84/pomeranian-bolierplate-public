@@ -21,6 +21,7 @@ import { blockRouterMetaData as ExercisiesFetch } from './Js-exercisies-fetch/ro
 import { blockRouterMetaData as PromisesMethodsTraining } from './PromiseMethodsTraining/router-data';
 import { blockRouterMetaData as BasicCalculator } from './Calculator/router-data';
 import { blockRouterMetaData as Testing } from './Testing/router-data';
+import { blockRouterMetaData as VanihingString } from './VanishingString/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -44,5 +45,6 @@ export const blockRouterMetaData = [
   PromisesMethodsTraining,
   BasicCalculator,
   Testing,
+  VanihingString,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
