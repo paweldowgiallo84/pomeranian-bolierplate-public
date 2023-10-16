@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
+import cardReverse from '../images/pokemon-card-revrse.png';
 
 const PokemonData = ({
   getPokemons,
   getTypeOfPokemon,
   getPokemonHP,
   getTypeOfPokemonClassName,
-  pokemon,
   getPokemonAtt,
+  getPokemonDef,
+  getPokemonSpecAtt,
+  getPokemonSpecDef,
+  getPokemonSpd,
 }) => {
+  const [reverseVisible, setReverseVisible] = useState(false);
+
+  const showReverse = () => {
+    
+  };
+
   return (
     <div className="container--grid-wraper">
       {getPokemons.map((pokemon, index) => (
         <div
+          onClick={showReverse}
           key={index}
           className={`container--grid-tile container--grid-${getTypeOfPokemonClassName(
             pokemon.types
@@ -31,6 +42,14 @@ const PokemonData = ({
             <span>Lenght: {pokemon.height}</span>
             <span>Weight: {pokemon.weight} lbs.</span>
             <span>{getTypeOfPokemonClassName(pokemon.types)}</span>
+          </div>
+          <hr className="card__line__divider" />
+          <div className="pokemon__stats">
+            <span>Attack: {getPokemonAtt(pokemon.stats)}</span>
+            <span>Defence: {getPokemonDef(pokemon.stats)}</span>
+            <span>Special Attack: {getPokemonSpecAtt(pokemon.stats)}</span>
+            <span>Special Deffense: {getPokemonSpecDef(pokemon.stats)}</span>
+            <span>Speed: {getPokemonSpd(pokemon.stats)}</span>
           </div>
         </div>
       ))}

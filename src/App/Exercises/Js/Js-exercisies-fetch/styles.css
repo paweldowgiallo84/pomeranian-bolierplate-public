@@ -111,7 +111,6 @@
 
 .pokemon-type {
     width: 30px;
-
 }
 
 .pokemon-type-weight-height {
@@ -121,7 +120,23 @@
     justify-content: space-around;
     width: 85%;
     margin: 0 auto;
-   
-
     background-color: rgba(225, 190, 12, 0.178);
+}
+
+.card__line__divider {
+    width: 95%;
+    border: 1px solid #000;
+}
+
+.pokemon__stats {
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: space-between;
+    row-gap: 0.3rem;
+    padding: 0.5rem 0.5rem;
+}
+
+.pokemon__stats>span {
+    width: 7.2rem;    
 }
